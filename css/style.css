@@ -107,7 +107,7 @@ body{
 }
 .banner
 {
-    background-image: url(../images/croydon-banner.jpg);
+    background-image: url(../images/gatwick_main_banner.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     min-height:450px;
@@ -416,7 +416,7 @@ input[type=text], .select {
 .a1
 {
     font-size:28px;
-    font-family: 'Niramit', sans-serif;
+     font-family: 'Rubik', sans-serif; 
     letter-spacing: 1px;
     font-weight:bold;
     padding:10px;
@@ -458,6 +458,28 @@ td, th {
     padding:150px 0px;
         font-family: 'Rubik', sans-serif; 
 }
+
+.aboutus
+{
+           font-family: 'Rubik', sans-serif; 
+    line-height:28px;
+}
+
+
+footer
+{
+    margin-top:60px;
+    padding:20px;
+    color:#ffffff;
+    font-size:15px;
+     font-family: 'Rubik', sans-serif; 
+    background-color:#000000;
+}
+
+
+
+
+
 
 
 @media only screen and (max-width: 480px) {
