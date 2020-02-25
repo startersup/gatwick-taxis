@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Booking Information | Gatwick Taxis </title>
+    <title>Booking Success | Gatwick Taxis </title>
     <link rel="icon" href="../images/favicon.png" type="image/gif" sizes="16x16">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,8 +14,8 @@
     <link href="https://fonts.googleapis.com/css?family=Muli|Niramit|Open+Sans|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
-    <nav class="navbar navbar-fixed-top">
+    <body>
+        <nav class="navbar navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -27,11 +27,11 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav center-nav">
-                    <li><a href="../about.html">About</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="#our_fleets">Our Fleets</a></li>
-                    <li><a href="../areas/">Areas Covering</a></li>
-               <li><a href="../track-booking/">Track Bookings</a></li>
-                    <li><a href="../fixed-fares">Fixed Fares</a></li>
+                    <li><a href="/areas/">Areas Covering</a></li>
+                    <li><a href="track.html">Track Bookings</a></li>
+                    <li><a href="/fixed-fares">Fixed Fares</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a class="login">Login</a></li>
@@ -40,137 +40,31 @@
             </div>
         </div>
     </nav>
-<section class="info container top-margin">
-        <div class="row">
-            <div class="col-md-7">
-                   <div class="quote-card headingtab"> <h3 class="text-secondary">Journey Information</h3></div>
-                   <div class="quote-card infotab">
-                       <div class="row">
-               <div class="col-md-6 ">
-                   <label >Passenger Name:</label>
-                   <input type="text"  class="controls" placeholder="Enter Passenger Name">
-                       </div>
-                               <div class="col-md-6">
-                   <label >Passenger  Email:</label>
-                   <input type="text"  class="controls"  placeholder="Enter Passenger Email" >
-                       </div></div> 
-                        <div class="row">
-                             <div class="col-md-6 ">
-                   <label >Contact Number:</label>
-                   <input type="text" class="controls"  placeholder="Enter Passenger Contact" value="+44">
-                       </div>
-                            <div class="col-md-6 ">
-                   <label >Alternate Number:</label>
-                   <input type="text"  class="controls"  placeholder="Enter Alternate Contact" value="+44">
-                            </div></div>
-                           <div class="row">
-                             <div class="col-md-6">
-                   <label >Pickup Full Address:</label>
-                   <input type="text"  class="controls"  placeholder="Eg:Building Number, Flat No"  >
-                       </div>
-                            <div class="col-md-6">
-                   <label >Dropoff Full Address:</label>
-                   <input type="text" class="controls"  placeholder="Eg:Building Number, Flat No" >
-                            </div></div>
-                           <div class="row">
-                             <div class="col-md-6 ">
-                   <label >Flight Details:</label>
-                   <input type="text" class="controls"   placeholder="Eg: B789" >
-                       </div>
-                            <div class="col-md-6 ">
-                   <label >Payment Mode:</label>
-             <select class="select" >
-               <option value="1">Debit / Credit quote-card (3% Admin Charges)</option>
-               <option value="2">Paypal Transaction(5% quote-card Charges)</option>
-               <option value="3">Cash on Ride (Deposit Required)</option>
-             </select>
-                            </div></div>
-                             <div class="row">
-                             <div class="col-md-6">
-                   <label >Meet & Greet(£10.00):</label>
-                   <select  class="select">
-               <option value="1">No I don't Need </option>
-               <option value="2">Yes I Need Meet & Greet.</option>
-             </select>
-                       </div>
-                            <div class="col-md-6 ">
-                   <label >Child Seat(£5.00 each):</label>
-                   <select  class="select">
-               <option value="1">No I don't Need </option>
-               <option value="2">Yes I Need Meet & Greet.</option>
-             </select>
-                            </div></div>
-                                 <div class="row">
-                                       <div class="col-md-12"><br>
-                                 <label >Special information to us (optional):</label>
-                                   <textarea class="select" rows="3" id="comment"></textarea>
-                                     </div></div>
-                                
-                      <div class="checkbox">
-             <label><input type="checkbox" value=""> I Agree the <a href="index.html">Terms and Conditions</a> Mentioned by your Company</label>
-           </div><br>
-                    <center> <a href="../success.html" class="small-button">Book Now</a></center>   
-        <br>
-
-            </div>
+        
+        
+        
+        <section class="track-panel">
+        <div class="container">
+            
+            <div class="track-search">
+            <input class="controls" type="text" placeholder="Enter Booking Reference Id">
+                </div>
+             <div class="row">
+     <div class="col">
+       <ul id="progress-bar" class="progressbar">
+         <li class="active">Booked</li>
+         <li>Booking Confirmed</li>
+         <li>Driver Allocated</li>
+         <li>Booking Completed</li>
+      </ul>
+     </div>
+  </div>  
+            
         </div>
-        <div class="col-md-5">
-               <div class="quote-card headingtab"><h3 class="text-secondary">Details Provided</h3></div>
-                    <div class="quote-card infotab">
-                   <table>
-         <tr>
-           <td>Pickup From:</td>
-           <td>Gatwick Airport North Terminal Approach </td>
-         </tr>
-         <tr>
-           <td>Dropoff To:</td>
-           <td>Heathrow Airport Terminal 5</td>
-         </tr>
-         <tr>
-           <td>Passengers:</td>
-           <td>1</td>
-         </tr>
-         <tr>
-           <td>Luggages:</td>
-           <td>1</td>
-         </tr>
-           <tr>
-           <td>Cab Type:</td>
-           <td>Saloon x 1</td>
-         </tr>            
-         <tr>
-           <td>Date & Time:</td>
-           <td>11/10/2018 12:30</td>
-         </tr>
-         <tr>
-           <td>Total Fare:</td>
-           <td>£50.00</td>
-         </tr>
-       </table>                
-      
-             </div>
-             <div class="quote-card headingtab"><h3 class="text-secondary">Booking Note</h3></div>
-             <div class="quote-card infotab">
-                 <ul>
-                <li> <p>All Bookings made in the website needs further confirmation through email by <b>tapping the button </b>on your booking information Email, which will be automatically sent when you booked a Cab.</p></li>
-                <li> <p> Bookings made with Cash on Ride requires <b>minimum 10% Deposit </b>as the booking confirmation fails to pay deposit leads to cancellation of booking.</p></li>
-                <li> <p> In case of any cancellation of the booking should be made<b> before 24 hours of the journey </b>fails to do leads to Admin charges and refund the Balance ( applicable for paid Bookings).
-                    </p></li></ul>
-             </div>
-             <div class="quote-card headingtab"><h3 class="text-secondary">Need any help?</h3></div>
-             <div class="quote-card infotab">
-                   <ul>
-                           <li> <p><b>For Bookings: </b>+44 01293344804</p></li>
-                           <li> <p><b>For instant Reply:</b> Initiate Live Chat</p></li>
-                           <li> <p><b>For Complaints:</b> complaints@gatwick-airporttaxis.com</p></li>
-                 </ul>
-             </div>
-               </div>
-               </div>
         </section>
-    
-    
-        <footer>
+        
+        
+            <footer>
         <div class="primary-footer">
             <div class="container">
                 <div class="row">
@@ -249,6 +143,7 @@
         </div>
 
     </footer>
+        </body>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {},
@@ -264,6 +159,4 @@
         })();
 
     </script>
-    
-    </body></html>
-       
+</html>
