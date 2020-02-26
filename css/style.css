@@ -815,9 +815,17 @@ font-family: 'Rubik', sans-serif;
     line-height: 36px;
     text-shadow: none;
     }
+    .gt-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
     .card
     {
             padding: 30px;
+    }
+    .quote-card
+    {
+        
     }
     .para
     {
@@ -908,5 +916,9 @@ font-size:10px;
     letter-spacing:0.6px;
     color:#000;
     text-shadow: 3px 3px 3px #000000;   
+}
+    .testimonials h3 {
+    font-size: 30px;
+    line-height: 38px;
 }
 }
