@@ -163,6 +163,7 @@ $result2=mysqli_query($conn,"SELECT `id`,`percentage`,`rating`,`time`,`special`,
 $i=0;
 while($rows= mysqli_fetch_array($result2,MYSQLI_ASSOC))
 {
+    $partneroffer[$i]= $rows["percentage"];
     $partnerlist[$i]=$rows["id"];
      $partnerRating[$i]=$rows["rating"];
       $partnerTime[$i]=$rows["time"];
