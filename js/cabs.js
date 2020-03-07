@@ -97,17 +97,17 @@ function ViewAll(element)
 {
 var cabList=['Saloon','Estate','MPV-4','MPV-6','8-Seater','9-Seater'];
 document.getElementById('MyCarsView').innerHTML='';
-
+clrflg = 'N' ;
 for(var i=0;i<cabList.length;i++)
 {
     var tempobj ={};
     tempobj["id"]=cabList[i];
     ViewMyCabs(tempobj)
-    clrflg = 'Y' ;
+    
 
        
 }
-
+clrflg = 'Y' ;
 }
 function ViewMyCabs(element)
 {
