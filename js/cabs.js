@@ -1,6 +1,7 @@
 var CabType="Saloon";
 var CabObject={};
 var TempElement={"id":"Saloon"};
+var clrflg = 'Y';
 function LoadMyCabs(ele)
 {
  var myurl =  LocationUrl +'myapi/fare_calculator.php';
@@ -95,11 +96,16 @@ function ServerEvent(apiJson,apiUrl,fnName)
 function ViewAll(element)
 {
 var cabList=['Saloon','Estate','MPV-4','MPV-6','8-Seater','9-Seater'];
+document.getElementById('MyCarsView').innerHTML='';
+
 for(var i=0;i<cabList.length;i++)
 {
     var tempobj ={};
     tempobj["id"]=cabList[i];
     ViewMyCabs(tempobj)
+    clrflg = 'Y' ;
+
+       
 }
 
 }
@@ -110,8 +116,11 @@ function ViewMyCabs(element)
     var objcars = temp[CabType];
     var objPartners=temp["partner"];
     
+    if(clrflg === 'Y' )
+    {
+        document.getElementById('MyCarsView').innerHTML='';
+    }
     
-    document.getElementById('MyCarsView').innerHTML='';
     var imagepath=objcars.images;
     var objCapacity =objcars.capacity;
     var addcontent ='';
