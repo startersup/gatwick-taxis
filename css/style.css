@@ -20,6 +20,7 @@ body{
     font-weight:800;
     letter-spacing:0.9px;
     color:#4dc199;
+    padding: 15px 15px 15px 0px !important;
     text-shadow: 0 0 4px #f4f4f4;
 }
 .navbar-brand span
@@ -663,7 +664,7 @@ font-family: 'Rubik', sans-serif;
 }
 .gt-container
 {
-    max-width:900px;
+    max-width:1250px;
     margin:0 auto;
 }
 .gt-star-rate
