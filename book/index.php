@@ -30,7 +30,7 @@ include($_SERVER['DOCUMENT_ROOT']."/modal/modal.php");
     <link href="https://fonts.googleapis.com/css?family=Muli|Niramit|Open+Sans|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body onload="SetOnLoad();">
+<body onload="SetOnLoad();" >
     <nav class="navbar navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
