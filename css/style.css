@@ -464,7 +464,7 @@ text-align:center;
    padding:0px 2px;
     margin:0px;
  }
- select { font-family: 'FontAwesome', sans-serif }
+ select { font-family: 'FontAwesome', sans-serif !important }
 .book
 {
     background-color: #00000080;
@@ -945,5 +945,5 @@ font-size:10px;
     font-size: 30px;
     line-height: 38px;
 }
-     select { font-family: 'FontAwesome', sans-serif }
+     select { font-family: 'FontAwesome', sans-serif  !important}
 }
