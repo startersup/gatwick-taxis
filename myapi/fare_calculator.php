@@ -195,6 +195,8 @@ $i++;
 
 $_SESSION[$sessionparams]["partner"]=$partnerlist;
 $response["partner"]=$partnerlist;
+$_SESSION[$sessionparams]["offer"]=$partneroffer;
+$response["offer"]=$partneroffer;
 $response["rating"]=$partnerRating;
 $response["time"]=$partnerTime;
 $response["special"]=$partnerSpecial;
