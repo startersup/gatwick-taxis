@@ -1,4 +1,15 @@
 <?php
+
+
+$sessionparams=$_REQUEST['q'];
+
+$apipath = $_SERVER['DOCUMENT_ROOT']."/myapi/";
+$spath = $_SERVER['DOCUMENT_ROOT']."/connection/connect.php";
+include($spath);
+include($apipath."get_session.php");
+include($_SERVER['DOCUMENT_ROOT']."/modal/modal.php");
+
+
 ?>
 
 <!DOCTYPE html>
@@ -50,6 +61,9 @@
             <div class="col-md-7">
                    <div class="quote-card headingtab"> <h3 class="text-secondary">Journey Information</h3></div>
                    <div class="quote-card infotab">
+                   <form method="POST" id="myform" action="../myapi/handle_session.php" >
+                               <input type="hidden"name="ses"value="book">
+                                <input type="hidden"name="q"value="<?php echo($_REQUEST["q"]); ?>">
                        <div class="row">
                <div class="col-md-6 ">
                    <label >Passenger Name:</label>
@@ -118,39 +132,41 @@
         <br>
 
             </div>
+</form>
         </div>
         <div class="col-md-5">
                <div class="quote-card headingtab"><h3 class="text-secondary">Details Provided</h3></div>
                     <div class="quote-card infotab">
                    <table>
-         <tr>
+                   <tr>
            <td>Pickup From:</td>
-           <td> </td>
+           <td> <?php echo($_SESSION[$sessionparams]["pick"]); ?> </td>
          </tr>
          <tr>
            <td>Dropoff To:</td>
-           <td>Heathrow Airport Terminal 5</td>
+           <td><?php echo($_SESSION[$sessionparams]["drop"]); ?></td>
          </tr>
          <tr>
            <td>Passengers:</td>
-           <td>1</td>
+           <td><?php echo($_SESSION[$sessionparams]["np"]); ?></td>
          </tr>
          <tr>
            <td>Luggages:</td>
-           <td>1</td>
+           <td><?php echo($_SESSION[$sessionparams]["nl"]); ?></td>
          </tr>
            <tr>
            <td>Cab Type:</td>
-           <td>Saloon x 1</td>
+           <td><?php echo($_SESSION[$sessionparams]["selected_type"]); ?></td>
          </tr>            
          <tr>
            <td>Date & Time:</td>
-           <td>11/10/2018 12:30</td>
+           <td><?php echo($_SESSION[$sessionparams]["date"]." ".$_SESSION[$sessionparams]["hrs"].":".$_SESSION[$sessionparams]["min"]); ?></td>
          </tr>
          <tr>
            <td>Total Fare:</td>
-           <td>£50.00</td>
+           <td id="ShowFare">£<?php echo($_SESSION[$sessionparams]["selected_fare"]);  ?></td>
          </tr>
+
        </table>                
       
              </div>
