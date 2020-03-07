@@ -118,7 +118,19 @@ function ViewMyCabs(element)
     for(var i=0; i<objPartners.length;i++)
     {
         var myRating = temp['rating'][i];
-        
+        myRating = parseInt(myRating);
+        var strRating='';
+        for(var r=0;r<5;r++)
+        {
+            if(r<myRating)
+            {
+                strRating= strRating + ' <span class="fa fa-star checked"></span>';
+            }else{
+                strRating= strRating + ' <span class="fa fa-star "></span>';
+            
+            }
+
+        }
  /*
         addcontent = addcontent + ' <tr  id="'+objPartners[i]+'" onclick = "booknow(this);">';
         addcontent = addcontent +'<td>Minicabee #'+objPartners[i]+'<br>( '+temp['rating'][i]+' Rating )</small> </td>';
@@ -133,11 +145,7 @@ function ViewMyCabs(element)
         addcontent = addcontent + '                               </div>                                                                                 ';
         addcontent = addcontent + '                               <p class="fleet-name">GT Provider #23</p>                                              ';
         addcontent = addcontent + '                               <div class="gt-star-rate">                                                             ';
-        addcontent = addcontent + '                                   <span class="fa fa-star checked"></span>                                           ';
-        addcontent = addcontent + '                                   <span class="fa fa-star checked"></span>                                           ';
-        addcontent = addcontent + '                                   <span class="fa fa-star checked"></span>                                           ';
-        addcontent = addcontent + '                                   <span class="fa fa-star checked"></span>                                           ';
-        addcontent = addcontent + '                                   <span class="fa fa-star"></span>                                                   ';
+        addcontent = addcontent + strRating;
         addcontent = addcontent + '                               </div>                                                                                 ';
         addcontent = addcontent + '                               <p class="passenger-capacity">Up to '+objCapacity.split(',')[0]+' passengers per vehicle  </p>                     ';
         addcontent = addcontent + '                               <p class="discount-panel">'+CabType+' x 1</p>                                               ';
