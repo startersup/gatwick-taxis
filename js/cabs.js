@@ -167,7 +167,7 @@ function ViewMyCabs(element)
 }
     
  
-   document.getElementById('MyCarsView').innerHTML = addcontent;
+   document.getElementById('MyCarsView').innerHTML = document.getElementById('MyCarsView').innerHTML + addcontent;
 
    
  
