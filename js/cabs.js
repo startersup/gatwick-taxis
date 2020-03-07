@@ -117,7 +117,7 @@ function ViewMyCabs(element)
     var addcontent ='';
     for(var i=0; i<objPartners.length;i++)
     {
-        var myRating = objPartners['rating'][i];
+        var myRating = temp['rating'][i];
         
  /*
         addcontent = addcontent + ' <tr  id="'+objPartners[i]+'" onclick = "booknow(this);">';
