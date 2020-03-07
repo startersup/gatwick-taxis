@@ -159,7 +159,7 @@ function ViewMyCabs(element)
         addcontent = addcontent + '                               <p class="passenger-capacity">Up to '+objCapacity.split(',')[0]+' passengers per vehicle  </p>                     ';
         addcontent = addcontent + '                               <p class="discount-panel">'+CabType+' x 1</p>                                               ';
         addcontent = addcontent + '                               <p class="fare">£ '+objcars.disfare[i]+'</p>                                           ';
-        addcontent = addcontent + '                             <a href="/book/index.html"> <button class="button"  id="'+objPartners[i]+'" onclick = "booknow(this);" >Book Now</button></a>                 ';
+        addcontent = addcontent + '                             <a> <button class="button"  id="'+objPartners[i]+'" onclick = "booknow(this);" >Book Now</button></a>                 ';
         addcontent = addcontent + '                           </div>                                                                                     ';
         addcontent = addcontent + '                       </div>                                                                                         ';
             
