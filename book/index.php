@@ -163,7 +163,7 @@ include($_SERVER['DOCUMENT_ROOT']."/modal/modal.php");
            <td><?php echo($_SESSION[$sessionparams]["date"]." ".$_SESSION[$sessionparams]["hrs"].":".$_SESSION[$sessionparams]["min"]); ?></td>
          </tr>
          <tr>
-           <td>Total Fare:</td>
+           <td>Your Fare:</td>
            <td id="ShowFare">£<?php echo($_SESSION[$sessionparams]["selected_fare"]);  ?></td>
          </tr>
 
