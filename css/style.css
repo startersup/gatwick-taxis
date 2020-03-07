@@ -343,6 +343,10 @@ box-shadow: 0 1px 1px 0 rgba(90,122,190,.1), 0 10px 20px 0 rgba(90,122,190,.2);
     font-family: 'Rubik', sans-serif; 
 
 }
+.dropdown:hover .xd-dropdown-content {
+    opacity: 1;
+    transform: scaleY(1);
+}
 .xd-dropdown-content {
     backface-visibility: hidden;
     background-color: #ffffff !important;
