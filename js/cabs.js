@@ -6,14 +6,14 @@ function LoadMyCabs(ele)
  var myurl =  LocationUrl +'myapi/fare_calculator.php';
  var mydata={};
  mydata['cabtype']=ele.id;
- ServerEvent(mydata,myurl,'ViewMyCabs');
+ ServerEvent(mydata,myurl,'ViewAll');
 } 
 function LoadQuotes()
 {
  var myurl =  LocationUrl +'myapi/fare_calculator.php';
  var mydata={};
  mydata['q']=getUrlVars();
- ServerEvent(mydata,myurl,'ViewMyCabs');
+ ServerEvent(mydata,myurl,'ViewAll');
 } 
 
 //  function initMap(src,des,via,fnName) {
@@ -92,6 +92,17 @@ function ServerEvent(apiJson,apiUrl,fnName)
 
 }
 
+function ViewAll(element)
+{
+var cabList=['Saloon','Estate','MPV-4','MPV-6','8-Seater','9-Seater'];
+for(var i=0;i<cabList.length;i++)
+{
+    var tempobj ={};
+    tempobj["id"]=cabList[i];
+    ViewMyCabs(tempobj)
+}
+
+}
 function ViewMyCabs(element)
 {
     CabType=element.id;
@@ -99,17 +110,44 @@ function ViewMyCabs(element)
     var objcars = temp[CabType];
     var objPartners=temp["partner"];
     
+    
     document.getElementById('MyCarsView').innerHTML='';
     var imagepath=objcars.images;
+    var objCapacity =objcars.capacity;
     var addcontent ='';
     for(var i=0; i<objPartners.length;i++)
     {
- 
+        var myRating = objPartners['rating'][i];
+        
+ /*
         addcontent = addcontent + ' <tr  id="'+objPartners[i]+'" onclick = "booknow(this);">';
         addcontent = addcontent +'<td>Minicabee #'+objPartners[i]+'<br>( '+temp['rating'][i]+' Rating )</small> </td>';
         addcontent = addcontent+'<td>£'+objcars.disfare[i]+'</td>';
-        addcontent = addcontent+'</tr>';
-    }
+        addcontent = addcontent+'</tr>';  */
+
+        addcontent = addcontent + '    <div class="col-md-4">                                                                                            ';
+        addcontent = addcontent + '                           <div class="quote-card top-margin">                                                        ';
+        addcontent = addcontent + '                               <div class="float-card">10% Discount</div>                                             ';
+        addcontent = addcontent + '                               <div class="img-med-bar">                                                              ';
+        addcontent = addcontent + '                                   <img src="../images/'+imagepath+'.png" style="max-width:200px;width:100%;">        ';
+        addcontent = addcontent + '                               </div>                                                                                 ';
+        addcontent = addcontent + '                               <p class="fleet-name">GT Provider #23</p>                                              ';
+        addcontent = addcontent + '                               <div class="gt-star-rate">                                                             ';
+        addcontent = addcontent + '                                   <span class="fa fa-star checked"></span>                                           ';
+        addcontent = addcontent + '                                   <span class="fa fa-star checked"></span>                                           ';
+        addcontent = addcontent + '                                   <span class="fa fa-star checked"></span>                                           ';
+        addcontent = addcontent + '                                   <span class="fa fa-star checked"></span>                                           ';
+        addcontent = addcontent + '                                   <span class="fa fa-star"></span>                                                   ';
+        addcontent = addcontent + '                               </div>                                                                                 ';
+        addcontent = addcontent + '                               <p class="passenger-capacity">Up to '+objCapacity.split(',')[0]+' passengers per vehicle  </p>                     ';
+        addcontent = addcontent + '                               <p class="discount-panel">'+CabType+' x 1</p>                                               ';
+        addcontent = addcontent + '                               <p class="fare">£ '+objcars.disfare[i]+'</p>                                           ';
+        addcontent = addcontent + '                             <a href="/book/index.html"> <button class="button">Book Now</button></a>                 ';
+        addcontent = addcontent + '                           </div>                                                                                     ';
+        addcontent = addcontent + '                       </div>                                                                                         ';
+            
+
+}
     
  
    document.getElementById('MyCarsView').innerHTML = addcontent;
