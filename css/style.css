@@ -47,6 +47,7 @@ body{
     font-weight:400;
     padding:8px 15px;
     margin:5px 2px;
+    max-width: 120px;
       cursor:pointer;
     letter-spacing:0.4px;
    font-family: 'Rubik', sans-serif;   
@@ -58,6 +59,7 @@ body{
     border-color: #16A085;   
     color:#ffffff;
         font-weight:400;
+        max-width: 120px;
     padding:8px 15px;
     margin:5px 2px;
       cursor:pointer;
@@ -355,12 +357,12 @@ box-shadow: 0 1px 1px 0 rgba(90,122,190,.1), 0 10px 20px 0 rgba(90,122,190,.2);
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
     content: "";
-    min-width: 100px;
+    min-width: 250px;
     left: 0;
     opacity: 0;
     position: absolute;
-    top: 48px;
-    padding: 30px;
+    top: 50px;
+    padding: 10px;
     transform: scaleY(0);
     transform-origin: 50% 0;
     transition: all .1s linear .05s;
@@ -371,11 +373,24 @@ box-shadow: 0 1px 1px 0 rgba(90,122,190,.1), 0 10px 20px 0 rgba(90,122,190,.2);
 {
     margin:0;
     padding:0;
+    list-style-type: none;
 }
 .xd-dropdown-content ul li
 {
-    font-size:18px;
+    padding:10px;
 }
+.xd-dropdown-content ul li a
+{
+    font-size:15px;
+    color:rgba(44, 47, 66, 0.8);
+    font-weight:400;
+    text-decoration: none;
+    letter-spacing:0.5px;
+    cursor:pointer;
+   font-family: 'Rubik', sans-serif;
+}
+
+
 
 .checked {
     color: orange;
