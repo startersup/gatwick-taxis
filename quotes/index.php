@@ -44,7 +44,7 @@ include($apipath."get_session.php");
                 </div>
                 <div class="row">
                     <div id="mycustomform"> </div>
-                    <div class="gt-container" id="MyCarsView">
+                    <div class="gt-small-container" id="MyCarsView">
                    
                           
                     </div>
