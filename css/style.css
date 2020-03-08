@@ -599,7 +599,10 @@ td, th {
     padding:5px;
 }
 
-
+.gt-small-container
+{max-width:800px;
+    width:100%;
+}
 
 .about-croydon
 {

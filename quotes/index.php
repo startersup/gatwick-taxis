@@ -11,8 +11,6 @@ include($apipath."get_session.php");
 
 
 
-
-
 ?>
 
 
