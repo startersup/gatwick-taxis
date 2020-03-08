@@ -64,7 +64,8 @@ include($apipath."get_session.php");
             };
 
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 4,
+                zoom: 14,
+                disableDefaultUI: true,
                 center: myLatLng
             });
 
