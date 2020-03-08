@@ -106,6 +106,7 @@ $temp="g-20,g-30,g-40,g-50,g-60,g-75,g-90,g-105,g-120,g-140,g-160,g-180,g-200,g-
 $field = explode(',', $temp);
 
 $arr=array('Saloon','Estate','MPV-4','MPV-6','8-Seater','9-Seater');
+$arr_pass=array('4,2','4,2','4,6','6,4','7,5','7,6');
 for($k=0;$k<count($arr);$k++)
 {
 $cabtype=$arr[$k];
@@ -188,6 +189,7 @@ $i++;
 {
    $mycab=$arr[$k];
    $response[$mycab]["ofare"]=$myfare_original[$mycab];
+   $response[$mycab]["capacity"]=$arr_pass[$k];;
    $response[$mycab]["disfare"]=$myfare_discount[$mycab];
    $_SESSION[$sessionparams][$mycab]=$response[$mycab];
    $response[$mycab]["images"]=$images[$mycab];

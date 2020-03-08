@@ -1,4 +1,15 @@
 <?php
+
+
+$sessionparams=$_REQUEST['q'];
+
+$apipath = $_SERVER['DOCUMENT_ROOT']."/myapi/";
+$spath = $_SERVER['DOCUMENT_ROOT']."/connection/connect.php";
+include($spath);
+include($apipath."get_session.php");
+include($_SERVER['DOCUMENT_ROOT']."/modal/modal.php");
+
+
 ?>
 
 <!DOCTYPE html>
@@ -13,11 +24,13 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/common.js"></script>
+ <script src="../js/book.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Muli|Niramit|Open+Sans|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body onload="SetOnLoad();" >
     <nav class="navbar navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -48,37 +61,40 @@
             <div class="col-md-7">
                    <div class="quote-card headingtab"> <h3 class="text-secondary">Journey Information</h3></div>
                    <div class="quote-card infotab">
+                   <form method="POST" id="myform" action="../myapi/handle_session.php" >
+                               <input type="hidden"name="ses"value="book">
+                                <input type="hidden"name="q"value="<?php echo($_REQUEST["q"]); ?>">
                        <div class="row">
                <div class="col-md-6 ">
                    <label >Passenger Name:</label>
-                   <input type="text"  class="controls" placeholder="Enter Passenger Name">
+                   <input type="text"  class="controls" name="name" id="name" placeholder="Enter Passenger Name">
                        </div>
                                <div class="col-md-6">
                    <label >Passenger  Email:</label>
-                   <input type="text"  class="controls"  placeholder="Enter Passenger Email" >
+                   <input type="text"  class="controls" name="mail" id="mail" placeholder="Enter Passenger Email" >
                        </div></div> 
                         <div class="row">
                              <div class="col-md-6 ">
                    <label >Contact Number:</label>
-                   <input type="text" class="controls"  placeholder="Enter Passenger Contact" value="+44">
+                   <input type="text" class="controls" name="num1" id="num1" placeholder="Enter Passenger Contact" value="+44">
                        </div>
                             <div class="col-md-6 ">
                    <label >Alternate Number:</label>
-                   <input type="text"  class="controls"  placeholder="Enter Alternate Contact" value="+44">
+                   <input type="text"  class="controls" name="num2" id="num2"  placeholder="Enter Alternate Contact" value="+44">
                             </div></div>
                            <div class="row">
                              <div class="col-md-6">
                    <label >Pickup Full Address:</label>
-                   <input type="text"  class="controls"  placeholder="Eg:Building Number, Flat No"  >
+                   <input type="text"  class="controls" name="address1" id="address1" placeholder="Eg:Building Number, Flat No"  >
                        </div>
                             <div class="col-md-6">
                    <label >Dropoff Full Address:</label>
-                   <input type="text" class="controls"  placeholder="Eg:Building Number, Flat No" >
+                   <input type="text" class="controls" name="address2" id="address2"  placeholder="Eg:Building Number, Flat No" >
                             </div></div>
                            <div class="row">
                              <div class="col-md-6 ">
                    <label >Flight Details:</label>
-                   <input type="text" class="controls"   placeholder="Eg: B789" >
+                   <input type="text" name="location" id="location" class="controls"   placeholder="Eg: B789" >
                        </div>
                             <div class="col-md-6 ">
                    <label >Payment Mode:</label>
@@ -98,7 +114,7 @@
                        </div>
                             <div class="col-md-6 ">
                    <label >Child Seat(£5.00 each):</label>
-                   <select  class="select">
+                   <select  name="pay" id="pay"class="select">
                <option value="1">No I don't Need </option>
                <option value="2">Yes I Need Meet & Greet.</option>
              </select>
@@ -106,49 +122,51 @@
                                  <div class="row">
                                        <div class="col-md-12"><br>
                                  <label >Special information to us (optional):</label>
-                                   <textarea class="select" rows="3" id="comment"></textarea>
+                                   <textarea name="info" id="info" class="select" rows="3" id="comment"></textarea>
                                      </div></div>
                                 
                       <div class="checkbox">
              <label><input type="checkbox" value=""> I Agree the <a href="index.html">Terms and Conditions</a> Mentioned by your Company</label>
            </div><br>
-                    <center> <a href="../success.html" class="small-button">Book Now</a></center>   
+                    <center> <a onclick="SubmitForm();" class="small-button">Book Now</a></center>   
         <br>
 
             </div>
+</form>
         </div>
         <div class="col-md-5">
                <div class="quote-card headingtab"><h3 class="text-secondary">Details Provided</h3></div>
                     <div class="quote-card infotab">
                    <table>
-         <tr>
+                   <tr>
            <td>Pickup From:</td>
-           <td>Gatwick Airport North Terminal Approach </td>
+           <td> <?php echo($_SESSION[$sessionparams]["pick"]); ?> </td>
          </tr>
          <tr>
            <td>Dropoff To:</td>
-           <td>Heathrow Airport Terminal 5</td>
+           <td><?php echo($_SESSION[$sessionparams]["drop"]); ?></td>
          </tr>
          <tr>
            <td>Passengers:</td>
-           <td>1</td>
+           <td><?php echo($_SESSION[$sessionparams]["np"]); ?></td>
          </tr>
          <tr>
            <td>Luggages:</td>
-           <td>1</td>
+           <td><?php echo($_SESSION[$sessionparams]["nl"]); ?></td>
          </tr>
            <tr>
            <td>Cab Type:</td>
-           <td>Saloon x 1</td>
+           <td><?php echo($_SESSION[$sessionparams]["selected_type"]); ?></td>
          </tr>            
          <tr>
            <td>Date & Time:</td>
-           <td>11/10/2018 12:30</td>
+           <td><?php echo($_SESSION[$sessionparams]["date"]." ".$_SESSION[$sessionparams]["hrs"].":".$_SESSION[$sessionparams]["min"]); ?></td>
          </tr>
          <tr>
-           <td>Total Fare:</td>
-           <td>£50.00</td>
+           <td>Your Fare:</td>
+           <td id="ShowFare">£<?php echo($_SESSION[$sessionparams]["selected_fare"]);  ?></td>
          </tr>
+
        </table>                
       
              </div>
