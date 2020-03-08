@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai|Rubik:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai|Hammersmith+One|Rubik:400,500,700&display=swap');
 body{
     overflow-x:hidden;
 }
@@ -35,9 +35,10 @@ body{
     font-size:15px;
     color:rgba(44, 47, 66, 0.8);
     font-weight:400;
-    letter-spacing:0.5px;
+    letter-spacing:0.6px;
     cursor:pointer;
-   font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    font-family: 'Hammersmith One', sans-serif;
 }
 .navbar-right > li > a.login
 {
@@ -50,7 +51,7 @@ body{
     max-width: 120px;
       cursor:pointer;
     letter-spacing:0.4px;
-   font-family: 'Rubik', sans-serif;   
+    font-family: 'Hammersmith One', sans-serif;
 }
 .navbar-right > li > a.signup
 {
@@ -64,7 +65,7 @@ body{
     margin:5px 2px;
       cursor:pointer;
     letter-spacing:0.4px;
-   font-family: 'Rubik', sans-serif;  
+    font-family: 'Hammersmith One', sans-serif;
 }
 
 .navbar-right > li > a.signup:hover, .navbar-right > li > a.login:hover
@@ -138,10 +139,10 @@ body{
 }
 .banner
 {
-    background-image: url(../images/gatwick_main_banner.jpg);
+    background-image: url(../images/gatwick-home-banner.jpg);
     background-repeat: no-repeat;
     background-size:cover;
-    min-height:450px;
+    min-height:500px;
        font-family: 'Rubik', sans-serif; 
     background-color:#e2e3e9;
 }
@@ -435,19 +436,22 @@ box-shadow: 0 1px 1px 0 rgba(90,122,190,.1), 0 10px 20px 0 rgba(90,122,190,.2);
 }
     .fleet-name
     {
-       font-family: 'Rubik', sans-serif; 
+        font-family: 'Hammersmith One', sans-serif;
         text-align:center;
         font-weight:700;
         font-size:20px;  
     }
 .header
 {
-      font-family: 'Rubik', sans-serif; 
+    font-family: 'Hammersmith One', sans-serif;
     text-align:center;
-    font-weight:700;
-    margin-bottom:30px;
+    font-size:40px;
+    font-weight:800;
+    margin-bottom: 10px;
     letter-spacing:0.6px;
     color:#ffffff;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(0,0,0,1);
     text-shadow: 3px 3px 3px #000000;
 }
 .about-croydon h3,.fleets-croydon h3
@@ -455,7 +459,7 @@ box-shadow: 0 1px 1px 0 rgba(90,122,190,.1), 0 10px 20px 0 rgba(90,122,190,.2);
     text-align:center;
     font-size:28px;
     font-weight:800;
-         font-family: 'Rubik', sans-serif; 
+    font-family: 'Hammersmith One', sans-serif;
 }
 
 .about-croydon p
@@ -476,13 +480,14 @@ color: rgba(44, 47, 66, 0.8);
 }
 .fleet-desc
 {
-     font-family: 'Rubik', sans-serif; 
-color: #242438;
-text-align:center;
-    font-size: 12px;
+    font-family: 'Rubik', sans-serif; 
+    color: #242438;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 300;
     line-height: 20px;
     margin-bottom: 0;
-    letter-spacing:0.2px;
+    letter-spacing: 0.2px;
 }
 
 .nopadding {
@@ -503,7 +508,7 @@ input[type=text], .select {
     border:none;
     background-color:#ffffff;
     font-size:16px;
-    font-family: 'Rubik', sans-serif; 
+    font-family: 'Hammersmith One', sans-serif;
     border:1px solid #dcdcdc;
         -webkit-appearance: none;
     -webkit-border-radius: 0px;
@@ -536,7 +541,7 @@ input[type=text], .select {
     color:#ffffff;
     text-align:center;
     letter-spacing:0.5px;
-        font-family: 'Rubik', sans-serif; 
+    font-family: 'Hammersmith One', sans-serif;
 }
 .infotab
 {
@@ -549,7 +554,7 @@ input[type=text], .select {
     text-align:center;
     letter-spacing:1px;
     font-weight:bold;
-        font-family: 'Rubik', sans-serif; 
+    font-family: 'Hammersmith One', sans-serif;
 }
 .container1
 {
@@ -564,7 +569,7 @@ input[type=text], .select {
 .a1
 {
     font-size:28px;
-     font-family: 'Rubik', sans-serif; 
+    font-family: 'Hammersmith One', sans-serif;
     letter-spacing: 1px;
     font-weight:bold;
     padding:10px;
@@ -609,12 +614,12 @@ width:100%;
 .about-croydon
 {
     padding:150px 0px;
-        font-family: 'Rubik', sans-serif; 
+    font-family: 'Hammersmith One', sans-serif;
 }
 
 .aboutus
 {
-           font-family: 'Rubik', sans-serif; 
+    font-family: 'Hammersmith One', sans-serif;
     line-height:28px;
 }
 
@@ -622,7 +627,7 @@ width:100%;
 {
     margin-top: 50px;
     padding:50px 0px;
-font-family: 'Rubik', sans-serif; 
+    font-family: 'Hammersmith One', sans-serif;
     background-color: #e4e4e4;
 }
 .footer-bottom
@@ -630,7 +635,7 @@ font-family: 'Rubik', sans-serif;
     padding:20px;
     color:#ffffff;
     font-size:15px;
-     font-family: 'Rubik', sans-serif; 
+    font-family: 'Hammersmith One', sans-serif;
     background-color:#000000;
 }
 .footer-list
@@ -639,12 +644,19 @@ font-family: 'Rubik', sans-serif;
        margin: 0; /* To remove default bottom margin */ 
     padding: 0;
 }
-
+.center-txt
+{
+    text-align: center;
+    color:#ffffff;
+    font-size: 20px;
+    font-family: 'Hammersmith One', sans-serif;
+    
+}
 
 .footer-list li
 {
    margin:0 !important;
-    font-family: 'Rubik', sans-serif; 
+   font-family: 'Rubik', sans-serif; 
     left:0;
     padding:3px 0px;
 }
@@ -674,7 +686,7 @@ font-family: 'Rubik', sans-serif;
 
 .testimonials h3
 {
-      font-family: 'Rubik', sans-serif; 
+    font-family: 'Hammersmith One', sans-serif;
     font-weight:800;
     font-size:35px;
     text-align: center;
@@ -745,7 +757,7 @@ font-family: 'Rubik', sans-serif;
 .discount-panel
 {
   font-size:15px;
-     font-family: 'Rubik', sans-serif; 
+  font-family: 'Hammersmith One', sans-serif;
         text-align:center;
         font-weight:400;  
     color:#777777;   
@@ -753,7 +765,7 @@ font-family: 'Rubik', sans-serif;
 .passenger-capacity
 {
   font-size:15px;
-     font-family: 'Rubik', sans-serif; 
+  font-family: 'Hammersmith One', sans-serif;
         text-align:center;
         font-weight:400;  
     color:#777777;
@@ -761,7 +773,7 @@ font-family: 'Rubik', sans-serif;
 .fare
 {
     font-size:20px;
-     font-family: 'Rubik', sans-serif; 
+    font-family: 'Hammersmith One', sans-serif;
         text-align:center;
         font-weight:800;
 }
@@ -784,7 +796,7 @@ font-family: 'Rubik', sans-serif;
       font-weight:600;
       position: relative;
       text-align: center;
-      font-family: 'Rubik', sans-serif; 
+      font-family: 'Hammersmith One', sans-serif;
       text-transform: uppercase;
       color: #7d7d7d;
   }
@@ -797,7 +809,7 @@ font-family: 'Rubik', sans-serif;
       background-color: #7d7d7d;
       display: block;
       font-weight:600;
-      font-family: 'Rubik', sans-serif; 
+      font-family: 'Hammersmith One', sans-serif;
       text-align: center;
       margin: 0 auto 10px auto;
       border-radius: 50%;
@@ -810,7 +822,7 @@ font-family: 'Rubik', sans-serif;
       position: absolute;
       background-color: #7d7d7d;
       top: 7px;
-      font-family: 'Rubik', sans-serif; 
+      font-family: 'Hammersmith One', sans-serif;
       left: -50%;
       z-index: -1;
       transition: all .8s;
@@ -836,14 +848,14 @@ font-family: 'Rubik', sans-serif;
     text-align: center;
     font-weight:700;
     padding:20px 0px;
-     font-family: 'Rubik', sans-serif;  
+    font-family: 'Hammersmith One', sans-serif;
     color:#000000;
     font-size:25px;
     
 }
 .fixed-fares table thead
 {
-    font-family: 'Rubik', sans-serif;  
+    font-family: 'Hammersmith One', sans-serif; 
     font-size:16px;
     font-weight:500px;
     letter-spacing: 0.3px;
@@ -860,7 +872,7 @@ font-family: 'Rubik', sans-serif;
     }
     .header
     {
-       font-family: 'Rubik', sans-serif;
+        font-family: 'Hammersmith One', sans-serif;
     text-align: center;
     font-weight: 800;
     font-size: 24px;
@@ -927,7 +939,7 @@ padding-top:80px;
     padding:6px;
     font-size:12px;
     letter-spacing:0.5px;
-  font-family: 'Rubik', sans-serif; 
+    font-family: 'Hammersmith One', sans-serif;
 
 }
 
@@ -944,7 +956,7 @@ padding-top:80px;
     font-size:13px;
     text-align:center;
     letter-spacing:0.5px;
-    font-family: 'Rubik', sans-serif;  
+    font-family: 'Hammersmith One', sans-serif; 
 
 }
 .rigid
@@ -955,7 +967,7 @@ font-size:10px;
 .dynamic
 {
     font-size:13px;
-     font-family: 'Rubik', sans-serif; 
+    font-family: 'Hammersmith One', sans-serif;
     padding:10px 20px;
     letter-spacing:0.4px;
     
