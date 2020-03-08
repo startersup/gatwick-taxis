@@ -424,9 +424,18 @@ box-shadow: 0 1px 1px 0 rgba(90,122,190,.1), 0 10px 20px 0 rgba(90,122,190,.2);
 }
 .map-overlay
 {
+    background-color:#ffffff;
+    padding:20px;
+    z-index:10;
     position: absolute;
     top:10px;
     right:30px;
+}
+.map-overlay span
+{
+    font-size:16px;
+    font-family: 'Rubik', sans-serif; 
+    color:#000000;
 }
 #map {
     width:100%;
