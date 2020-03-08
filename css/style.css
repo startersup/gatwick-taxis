@@ -600,8 +600,10 @@ td, th {
 }
 
 .gt-small-container
-{max-width:800px;
-    width:100%;
+{max-width:900px;
+width:100%;
+ margin: 0 auto;
+
 }
 
 .about-croydon
