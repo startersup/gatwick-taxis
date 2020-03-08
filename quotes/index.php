@@ -60,29 +60,111 @@ include($apipath."get_session.php");
             </div>
         </div>
     </section>
-    <script>
-        function initMap() {
-            var myLatLng = {
-                lat: -25.363,
-                lng: 131.044
-            };
+    <?php
+	
+	if($_SESSION[$sessionid]['via'] !="")
+	{
+	
+	?>
+  <script>
+    var directionsDisplay;
+    var directionsService;
+    var map;
 
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 14,
-                disableDefaultUI: true,
-                center: myLatLng
-            });
+    function initMap() {
+      directionsService = new google.maps.DirectionsService;
+       var myLatLng = {lat: 51.5287352, lng: -0.3817888};
+      var chicgo = new google.maps.LatLng(51.5287352, -0.3817888);
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 8,
+        center:myLatLng
+      });
+      directionsDisplay = new google.maps.DirectionsRenderer({
+        map: map
+      });
+      calcRoute();
+    }
+    
+   
+    var waypoints = [];
+    var address="<?php echo($_SESSION[$sessionid]['via']); ?>";
+    waypoints.push({
+            location: address,
+            stopover: true
+        });
+       
 
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                title: 'Hello World!'
-            });
+    function calcRoute() {
+      var start = "<?php echo($_SESSION[$sessionid]['pick']); ?>";
+      var end =  "<?php echo($_SESSION[$sessionid]['drop']); ?>";
+     // var via="<?php echo($via); ?>";
+      var request = {
+        origin: start,
+        destination: end,
+      waypoints: waypoints,
+      optimizeWaypoints: true,
+       travelMode: google.maps.DirectionsTravelMode.DRIVING
+      };
+      directionsService.route(request, function(result, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+         directionsDisplay.setDirections(result);
         }
+      });
+    };
+  </script>
+  
+  <?php }
+  
+  else
+  
+  {
+  
+  
+  ?> 	
+  <script>
 
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvy6GLKa73k7Kwov34EgQazWaRy9Hp8xE&callback=initMap">
-    </script>
+    var directionsDisplay;
+    var directionsService;
+    var map;
+
+    function initMap() {
+      directionsService = new google.maps.DirectionsService;
+        var myLatLng = {lat: 51.5287352, lng: -0.3817888};
+      var chicgo = new google.maps.LatLng(51.5287352, -0.3817888);
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 8,
+        center:myLatLng
+      });
+      directionsDisplay = new google.maps.DirectionsRenderer({
+        map: map
+      });
+      calcRoute();
+      
+      
+   
+    }
+
+    function calcRoute() {
+      var start = "<?php echo($_SESSION[$sessionid]['pick']); ?>";
+      var end =  "<?php echo($_SESSION[$sessionid]['drop']); ?>";
+      var request = {
+        origin: start,
+        destination: end,
+        travelMode: google.maps.TravelMode.DRIVING
+      };
+      directionsService.route(request, function(result, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+          directionsDisplay.setDirections(result);
+        }
+      });
+    };
+  </script>
+
+<?php } ?>
+  
+    
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV_e29ZNv8f0S3-2IzNwIPqc-ycslxNBE&callback=initMap"></script>
+
 </body>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
