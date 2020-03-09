@@ -9,7 +9,7 @@
                     <button class="small-button">Read More</button>
                 </div>
                 <div class="col-md-6">
-                    <img src="./images/croydon-airport.svg" style="max-width:600px;width:100%;">
+                    <img src="../images/croydon-airport.svg" style="max-width:600px;width:100%;">
                 </div>
             </div>
         </div>

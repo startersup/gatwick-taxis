@@ -66,19 +66,19 @@
             <div class="mc-features hidden-xs" id="mc-border">
                 <div class="row">
                     <div class="col-md-4 mc-br-rght mc-flex-row">
-                        <img class="mc-ft-icon" src="./images/star.svg">
+                        <img class="mc-ft-icon" src="../images/star.svg">
                         <div class="mc-ft-pad ">
                             <h3>Best Rated quotes</h3>
                         </div>
                     </div>
                     <div class="col-md-4 mc-br-rght mc-flex-row">
-                        <img class="mc-ft-icon" src="./images/clock.svg">
+                        <img class="mc-ft-icon" src="../images/clock.svg">
                         <div class="mc-ft-pad">
                             <h3>Ontime Service</h3>
                         </div>
                     </div>
                     <div class="col-md-4 mc-flex-row">
-                        <img class="mc-ft-icon" src="./images/24-7.svg">
+                        <img class="mc-ft-icon" src="../images/24-7.svg">
                         <div class="mc-ft-pad">
                             <h3>24/7 Support</h3>
                         </div>

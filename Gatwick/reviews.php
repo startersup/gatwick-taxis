@@ -14,7 +14,7 @@
                         <div class="col-sm-3">
                             <div class="card">
                                 <div class="img-bar">
-                                    <img src="./images/user.svg" style="max-width:80px;width:100%;">
+                                    <img src="../images/user.svg" style="max-width:80px;width:100%;">
                                 </div>
                                 <p class="fleet-name">Riyas Ahamed</p>
                                 <p class="fleet-desc">Good Taxi Ride, ontime Pickup from gatwick airport.</p>
@@ -30,7 +30,7 @@
                         <div class="col-sm-3">
                             <div class="card">
                                 <div class="img-bar">
-                                    <img src="./images/user.svg" style="max-width:80px;width:100%;">
+                                    <img src="../images/user.svg" style="max-width:80px;width:100%;">
                                 </div>
                                 <p class="fleet-name">shafrina</p>
                                 <p class="fleet-desc">Arrived as arranged and completed trip without a problem. Communication very good. Would use again , very competitive pricing.</p>
@@ -46,7 +46,7 @@
                         <div class="col-sm-3">
                             <div class="card">
                                 <div class="img-bar">
-                                    <img src="./images/user.svg" style="max-width:80px;width:100%;">
+                                    <img src="../images/user.svg" style="max-width:80px;width:100%;">
                                 </div>
                                 <p class="fleet-name">Anver Seyed</p>
                                 <p class="fleet-desc">Best taxi company in my opinion and others, always so punctual always on time for when they say they will be at my destination to pick me up i can always trust .</p>
@@ -62,7 +62,7 @@
                         <div class="col-sm-3">
                             <div class="card">
                                 <div class="img-bar">
-                                    <img src="./images/user.svg" style="max-width:80px;width:100%;">
+                                    <img src="../images/user.svg" style="max-width:80px;width:100%;">
                                 </div>
                                 <p class="fleet-name">Claire Allen</p>
                                 <p class="fleet-desc">Cheap and Best taxi service, book a taxi for wedding, the taxi was very cheap at peak time.</p>

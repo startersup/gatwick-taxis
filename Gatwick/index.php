@@ -4,7 +4,7 @@
 
 <head>
     <title>Gatwick Taxis | Book Cheap and Comfortable Taxis & Cabs</title>
-    <link rel="icon" href="./images/favicon.png" type="image/gif" sizes="16x16">
+    <link rel="icon" href="../images/favicon.png" type="image/gif" sizes="16x16">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Book cheap Local Taxis online, Gatwick Airport chepeast taxis call us at :+44 1293344804 and we are working 24/7." />
@@ -26,11 +26,11 @@
     <meta name="twitter:title" content="Minicabee | Book Cheap Taxis & Minicabs Online" />
     <meta name="twitter:description" content=" Compare and Book cheap Taxis and Minicabs online, gatwick chepeast taxis at minicabee" />
     <meta name="twitter:image" content="https://minicabee.co.uk/assets/images/logo.png" />
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/indexjs.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/indexjs.js"></script>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Muli|Niramit|Open+Sans|Roboto" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
