@@ -40,7 +40,7 @@ include($apipath."get_session.php");
 
             <div class="col-md-8 nopadding heighto">
                 <div class="quote-card sticky-card">
-                    <p class="dynamic">Taxi Booking from <b id=""><?php echo($_SESSION[$sessionid]['pick']); ?></b> to <b><?php echo($_SESSION[$sessionid]['drop']); ?></b> at 12:00 on 12th september 2018</p>
+                    <p class="dynamic">Taxi Booking from <b id=""><?php echo($_SESSION[$sessionid]['pick']); ?></b> to <b><?php echo($_SESSION[$sessionid]['drop']); ?></b> <?php echo("at ".$_SESSION[$sessionid]['date']." on ".$_SESSION[$sessionid]['hrs'].":".$_SESSION[$sessionid]['min']); ?></p>
                 </div>
                 <div class="row">
                     <div id="mycustomform"> </div>
