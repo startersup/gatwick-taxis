@@ -1,3 +1,3 @@
 <?php
-include("./Gatwick/index.php");
+include("Gatwick/index.php");
 ?>
