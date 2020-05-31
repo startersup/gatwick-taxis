@@ -21,7 +21,7 @@ $contents = "From ".$contents;
 
 ?>
     <section class="banner cr-mask">
-        <h1 class="header margintop">Book Cheap Taxis & Minicabs from Gatwick Airport <?php echo(" ".$contents); ?></h1>
+        <h1 class="header margintop">Book Cheap Taxis & Minicabs <?php echo(" ".$contents); ?></h1>
         <center><a href="tel:+441293344804"><button class="xs-button"><i class="fa fa-phone"></i> Call us : 01293344804</button></a></center>
         <div class="container">
             <div class="card book">
