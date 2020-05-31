@@ -2,7 +2,10 @@
 
 <body>
  
- <?php include('nav.php');
+ <?php 
+ 
+ include('header.php');
+ include('nav.php');
  include('banner.php');
  include('about.php');
  include('fleets.php');
