@@ -2,6 +2,10 @@
 
 
 $randomString="0YeSZoPE6Usltc3fiqIZUbQeq2B3ve";
+
+echo($randomString);
+echo("<br>");
+
 if($_SESSION[$randomString]['via'] == "")
 {
     $places=$_SESSION[$randomString]['pick']."~~".$_SESSION[$randomString]['drop'];
@@ -27,7 +31,11 @@ for($i =0;$i<$len;$i++ )
     
 $q = "https://maps.googleapis.com/maps/api/directions/json?origin=".$origin."&destination=".$destination."&key=AIzaSyAXOaL94s9M_jDhWXQxbzvTuAQIPf7c7a8"; 
     $json = file_get_contents($q);
-    
+    echo("$q ==> ".$q);
+echo("<br>");
+
+echo($json);
+echo("<br>");
 
 $details = json_decode($json);
 
