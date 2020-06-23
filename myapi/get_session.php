@@ -53,4 +53,8 @@ $_SESSION[$sessionid]['pay']=$output->{'pay'};
 $_SESSION[$sessionid]['selected']=$output->{'selected'};
 $_SESSION[$sessionid]['selected_type']=$output->{'selected_type'};
 $_SESSION[$sessionid]['selected_fare']=$output->{'selected_fare'};
+
+$_SESSION[$sessionid]['totaldistancecon']=$output->{'totaldistancecon'};
+$_SESSION[$sessionid]['totaltimecon']= $output->{'totaltimecon'};
+
 ?>

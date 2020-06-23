@@ -13,7 +13,7 @@ else{
     $sessionparams=$_REQUEST['q'];
 }
 
-
+echo($sessionparams);
 
 $query ="Select record from `session_table` where `id` = '".$sessionparams."'";
 
