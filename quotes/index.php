@@ -164,8 +164,7 @@ include($apipath."get_session.php");
 <?php } ?>
   
     
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBauQAxB_oaAk4z-NQN2BkhmD4AxzA2l6M&libraries=places&callback=initAutocomplete" async="" defer=""></script>
-
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBauQAxB_oaAk4z-NQN2BkhmD4AxzA2l6M&callback=initMap" async="" defer=""></script>
 </body>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
