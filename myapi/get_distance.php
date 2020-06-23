@@ -1,13 +1,6 @@
 <?php
 
 
-$randomString="0YeSZoPE6Usltc3fiqIZUbQeq2B3ve";
-
-echo($randomString);
-echo("<br>");
-
-echo($_SESSION);
-echo("<br>");
 
 if($_SESSION[$randomString]['via'] == "")
 {
@@ -20,8 +13,7 @@ if($_SESSION[$randomString]['via'] == "")
 
 $viapoints = explode("~~",$places);
 
-echo($places);
-echo("<br>");
+
 
 $len =sizeof($viapoints);
 $totalvia=$len-2;
@@ -35,13 +27,10 @@ for($i =0;$i<$len;$i++ )
     $destination = urlencode($viapoints[$j]);
     
     
-$q = "https://maps.googleapis.com/maps/api/directions/json?origin=".$origin."&destination=".$destination."&key=AIzaSyAXOaL94s9M_jDhWXQxbzvTuAQIPf7c7a8"; 
-    $json = file_get_contents($q);
-    echo("".$q);
-echo("<br>");
+   
+$q="https://maps.googleapis.com/maps/api/distancematrix/json?origins=".$origin."&destinations=".$destination."&key=AIzaSyAXOaL94s9M_jDhWXQxbzvTuAQIPf7c7a8";
 
-echo($json);
-echo("<br>");
+$json = file_get_contents($q);
 
 $details = json_decode($json);
 
