@@ -6,6 +6,9 @@ $randomString="0YeSZoPE6Usltc3fiqIZUbQeq2B3ve";
 echo($randomString);
 echo("<br>");
 
+echo($_SESSION);
+echo("<br>");
+
 if($_SESSION[$randomString]['via'] == "")
 {
     $places=$_SESSION[$randomString]['pick']."~~".$_SESSION[$randomString]['drop'];
