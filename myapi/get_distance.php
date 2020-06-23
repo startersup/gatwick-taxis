@@ -39,7 +39,7 @@ $details = json_decode($json);
 // $time=$details->routes[0]->legs[0]->duration->value;
 
 $distance=$details->rows[0]->elements[0]->distance->value;
-$time=$details->rows[0]->elements[0]->duration->text;
+$time=$details->rows[0]->elements[0]->duration->value;
 
 $totaldistance = $totaldistance + $distance;
 

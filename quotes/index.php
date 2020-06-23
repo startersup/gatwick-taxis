@@ -53,8 +53,8 @@ include($apipath."get_session.php");
             </div>
             <div class="col-md-4 nopadding">
                 <div class="map-overlay">
-                 <p><span>Total Miles :</span></p>
-                 <p><span>Total Time :</span></p>
+                 <p><span>Total Miles :<?php echo($_SESSION[$sessionid]['totaldistancecon']); ?></span></p>
+                 <p><span>Total Time :<?php echo($_SESSION[$sessionid]['totaltimecon']); ?></span></p>
                 </div>
                 <div id="map"></div>
             </div>
