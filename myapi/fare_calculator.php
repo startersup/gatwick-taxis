@@ -5,7 +5,16 @@ session_start();
 $spath = $_SERVER['DOCUMENT_ROOT']."/connection/connect.php";
 include($spath);
 
-$sessionparams=$_POST['q'];
+if($_POST['q']!=="")
+{
+    $sessionparams=$_POST['q'];
+}
+else{
+    $sessionparams=$_REQUEST['q'];
+}
+
+
+
 $query ="Select record from `session_table` where `id` = '".$sessionparams."'";
 
 $result=  mysqli_query($conn_site,$query);
