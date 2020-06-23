@@ -31,9 +31,12 @@ $q = "https://maps.googleapis.com/maps/api/directions/json?origin=".$origin."&de
 
 $details = json_decode($json);
 
-$distance=$details->routes[0]->legs[0]->distance->value;
+// $distance=$details->routes[0]->legs[0]->distance->value;
     
-$time=$details->routes[0]->legs[0]->duration->value;
+// $time=$details->routes[0]->legs[0]->duration->value;
+
+$distance=$details->rows[0]->elements[0]->distance->value;
+$time=$details->rows[0]->elements[0]->duration->text;
 
 $totaldistance = $totaldistance + $distance;
 
