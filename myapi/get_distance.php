@@ -59,7 +59,7 @@ $time=(int) ($totaltime/60);
 $mintime = $time % 60;
 $hrstime = ($time -$mintime ) / 60;
 
-$displaytime = $mintime." Mins"
+$displaytime = $mintime." Mins";
 
 if($hrstime !== "0"){
     $displaytime=$hrstime." Hrs ".$displaytime;
