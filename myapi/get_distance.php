@@ -25,7 +25,7 @@ for($i =0;$i<$len;$i++ )
     $destination = urlencode($viapoints[$j]);
     
     
-$q = "https://maps.googleapis.com/maps/api/directions/json?origin=".$origin."&destination=".$destination."&key=AIzaSyCV_e29ZNv8f0S3-2IzNwIPqc-ycslxNBE"; 
+$q = "https://maps.googleapis.com/maps/api/directions/json?origin=".$origin."&destination=".$destination."&key=AIzaSyAXOaL94s9M_jDhWXQxbzvTuAQIPf7c7a8"; 
     $json = file_get_contents($q);
     
 

@@ -164,7 +164,7 @@ include($apipath."get_session.php");
 <?php } ?>
   
     
-   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV_e29ZNv8f0S3-2IzNwIPqc-ycslxNBE&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBauQAxB_oaAk4z-NQN2BkhmD4AxzA2l6M&libraries=places&callback=initAutocomplete" async="" defer=""></script>
 
 </body>
     <!--Start of Tawk.to Script-->
