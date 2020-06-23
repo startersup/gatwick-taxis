@@ -17,6 +17,9 @@ if($_SESSION[$randomString]['via'] == "")
 
 $viapoints = explode("~~",$places);
 
+echo($places);
+echo("<br>");
+
 $len =sizeof($viapoints);
 $totalvia=$len-2;
 $len=$len-1;
@@ -31,7 +34,7 @@ for($i =0;$i<$len;$i++ )
     
 $q = "https://maps.googleapis.com/maps/api/directions/json?origin=".$origin."&destination=".$destination."&key=AIzaSyAXOaL94s9M_jDhWXQxbzvTuAQIPf7c7a8"; 
     $json = file_get_contents($q);
-    echo("$q ==> ".$q);
+    echo("".$q);
 echo("<br>");
 
 echo($json);
