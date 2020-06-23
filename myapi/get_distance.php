@@ -59,11 +59,18 @@ $time=(int) ($totaltime/60);
 $mintime = $time % 60;
 $hrstime = ($time -$mintime ) / 60;
 
+$displaytime = $mintime." Mins"
+
+if($hrstime !== "0"){
+    $displaytime=$hrstime." Hrs ".$displaytime;
+}
+
+
 $_SESSION[$randomString]['totaldistance']=$totaldistance;
 $_SESSION[$randomString]['totaltime']=$totaltime;
 $_SESSION[$randomString]['totaldistancecon']=$distance;
 $_SESSION[$randomString]['totaltimecon']=$time;
-    
+$_SESSION[$randomString]['displaytime']=$displaytime;
 // echo("<script> alert($distance); </script>")
 ?>
 
