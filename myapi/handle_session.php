@@ -127,7 +127,6 @@ $sql = "INSERT INTO `register` (`refid`, `name`, `mail`, `num1`, `num2`, `locati
 						
 							$result=mysqli_query($conn,$sql);
 				
-echo($sql);
 
 
 $path =$link."://". $_SERVER['HTTP_HOST']."/success/?q=".$sessionparams;

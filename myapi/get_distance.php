@@ -1,7 +1,7 @@
 <?php
 
 
-
+$randomString="0YeSZoPE6Usltc3fiqIZUbQeq2B3ve";
 if($_SESSION[$randomString]['via'] == "")
 {
     $places=$_SESSION[$randomString]['pick']."~~".$_SESSION[$randomString]['drop'];
