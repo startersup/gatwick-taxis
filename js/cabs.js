@@ -159,7 +159,7 @@ function ViewMyCabs(element)
         addcontent = addcontent + '                               <p class="passenger-capacity">Up to '+objCapacity.split(',')[0]+' passengers per vehicle  </p>                     ';
         addcontent = addcontent + '                               <p class="discount-panel">'+CabType+' x 1</p>                                               ';
         addcontent = addcontent + '                               <p class="fare">£ '+objcars.disfare[i]+'</p>                                           ';
-        addcontent = addcontent + '                             <a> <button class="button"  id="'+objPartners[i]+'" onclick = "booknow(this);" >Book Now</button></a>                 ';
+        addcontent = addcontent + '                             <a> <button class="button"  id="'+objPartners[i]+'_'+CabType+'" onclick = "booknow(this);" >Book Now</button></a>                 ';
         addcontent = addcontent + '                           </div>                                                                                     ';
         addcontent = addcontent + '                       </div>                                                                                         ';
             
@@ -175,11 +175,17 @@ function ViewMyCabs(element)
 
 function booknow(ele)
 {
-    var x = ele.id;
+    var x = ele.id.split("_")[0];
+    var cab =ele.id.split("_")[1];
     var session_param=getUrlVars();
     
-    var temp = '<form id="myForm" method="POST" action="'+LocationUrl+'myapi/handle_session.php?q='+session_param+'" hidden><input type="text" name="selected" value="'+x+'"><input type="text" name="cabtype" value="'+CabType+'"><input type="text" name="ses" value="quote"></form>';
+    var temp = '<form id="myForm" method="POST" action="'+LocationUrl+'myapi/handle_session.php?q='+session_param+'" hidden><input type="text" name="selected" value="'+x+'"><input type="text" name="cabtype" value="'+cab+'"><input type="text" name="ses" value="quote"></form>';
     document.getElementById('mycustomform').innerHTML = temp;
     
+    document.getElementById('myForm').submit();
+}
+
+function SubmitForm(){
+
     document.getElementById('myForm').submit();
 }

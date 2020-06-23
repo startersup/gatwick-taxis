@@ -136,7 +136,6 @@ $record = json_encode($_SESSION[$sessionparams]);
 $sql="UPDATE `session_table` SET `record`='".$record."' WHERE `id` ='".$sessionparams."'";
 $x = mysqli_query($conn_site,$sql) ;
 
-echo($record);
 echo("<script>window.location='$path';</script>");
 
 ?>
