@@ -54,6 +54,7 @@ $totaltime = $totaltime + $time;
 
 
 $distance=$totaldistance/1609.344;
+$distance=round($distance,2);
 $time=(int) ($totaltime/60);
 
 $mintime = $time % 60;

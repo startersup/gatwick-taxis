@@ -56,5 +56,6 @@ $_SESSION[$sessionid]['selected_fare']=$output->{'selected_fare'};
 
 $_SESSION[$sessionid]['totaldistancecon']=$output->{'totaldistancecon'};
 $_SESSION[$sessionid]['totaltimecon']= $output->{'totaltimecon'};
+$_SESSION[$sessionid]['displaytime']= $output->{'displaytime'};
 
 ?>
