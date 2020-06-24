@@ -69,41 +69,39 @@ $fare = $_SESSION[$sessionparams]['selected_fare'];
       
 $_SESSION[$sessionparams]['time'] = $_SESSION[$sessionparams]['hrs'].':'.$_SESSION[$sessionparams]['min'];
 $_SESSION[$sessionparams]['rtime'] = $_SESSION[$sessionparams]['rhrs'].':'.$_SESSION[$sessionparams]['rmin'];
-      
-      
-              
-   $pick=$_SESSION[$sessionid]['pick'];
-$drop=$_SESSION[$sessionid]['drop'];
-$via=$_SESSION[$sessionid]['via'];
-$np=$_SESSION[$sessionid]['np'];
-$nl=$_SESSION[$sessionid]['nl'];
-$date=$_SESSION[$sessionid]['date'];
-$hrs=$_SESSION[$sessionid]['hrs'];
-$min=$_SESSION[$sessionid]['min'];
-$rpick=$_SESSION[$sessionid]['rpick'];
-$rdrop=$_SESSION[$sessionid]['rdrop'];
-$rnp=$_SESSION[$sessionid]['rnp'];
-$rnl=$_SESSION[$sessionid]['rnl'];
-$rdate=$_SESSION[$sessionid]['rdate'];
-$rhrs=$_SESSION[$sessionid]['rhrs'];
-$rmin=$_SESSION[$sessionid]['rmin'];
-$return=$_SESSION[$sessionid]['return'];
+		  
+$pick=$_SESSION[$sessionparams]['pick'];
+$drop=$_SESSION[$sessionparams]['drop'];
+$via=$_SESSION[$sessionparams]['via'];
+$np=$_SESSION[$sessionparams]['np'];
+$nl=$_SESSION[$sessionparams]['nl'];
+$date=$_SESSION[$sessionparams]['date'];
+$hrs=$_SESSION[$sessionparams]['hrs'];
+$min=$_SESSION[$sessionparams]['min'];
+$rpick=$_SESSION[$sessionparams]['rpick'];
+$rdrop=$_SESSION[$sessionparams]['rdrop'];
+$rnp=$_SESSION[$sessionparams]['rnp'];
+$rnl=$_SESSION[$sessionparams]['rnl'];
+$rdate=$_SESSION[$sessionparams]['rdate'];
+$rhrs=$_SESSION[$sessionparams]['rhrs'];
+$rmin=$_SESSION[$sessionparams]['rmin'];
+$return=$_SESSION[$sessionparams]['return'];
 
-$address1=$_SESSION[$sessionid]['address1'];
-$address2=$_SESSION[$sessionid]['address2'];
-$location=$_SESSION[$sessionid]['location'];
-$meet=$_SESSION[$sessionid]['meet'];
-$child=$_SESSION[$sessionid]['child'];
-$name=$_SESSION[$sessionid]['name'];
-$mail=$_SESSION[$sessionid]['mail'];
-$num1=$_SESSION[$sessionid]['num1'];
-$num2=$_SESSION[$sessionid]['num2'];
-$info=$_SESSION[$sessionid]['info'];
-$pay=$_SESSION[$sessionid]['pay'];
+$address1=$_SESSION[$sessionparams]['address1'];
+$address2=$_SESSION[$sessionparams]['address2'];
+$location=$_SESSION[$sessionparams]['location'];
+$meet=$_SESSION[$sessionparams]['meet'];
+$child=$_SESSION[$sessionparams]['child'];
+$name=$_SESSION[$sessionparams]['name'];
+$mail=$_SESSION[$sessionparams]['mail'];
+$num1=$_SESSION[$sessionparams]['num1'];
+$num2=$_SESSION[$sessionparams]['num2'];
+$info=$_SESSION[$sessionparams]['info'];
+$pay=$_SESSION[$sessionparams]['pay'];
 
-$selected=$_SESSION[$sessionid]['selected'];
-$selected_type=$_SESSION[$sessionid]['selected_type'];
-$selected_fare=$_SESSION[$sessionid]['selected_fare'];
+$selected=$_SESSION[$sessionparams]['selected'];
+$selected_type=$_SESSION[$sessionparams]['selected_type'];
+$selected_fare=$_SESSION[$sessionparams]['selected_fare'];
 
 if($_SESSION[$sessionparams]['rpick']!=="")
 {
