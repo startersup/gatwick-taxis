@@ -58,4 +58,7 @@ $_SESSION[$sessionid]['totaldistancecon']=$output->{'totaldistancecon'};
 $_SESSION[$sessionid]['totaltimecon']= $output->{'totaltimecon'};
 $_SESSION[$sessionid]['displaytime']= $output->{'displaytime'};
 
+$_SESSION[$sessionparams]['bid']=$output->{'bid'};;
+$_SESSION[$sessionparams]['rid']=$output->{'rid'};;
+
 ?>
