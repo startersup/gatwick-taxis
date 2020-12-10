@@ -16,7 +16,7 @@ $id = $_SESSION[$sessionparams]['bid'];
 $rid = $_SESSION[$sessionparams]['rid'];
 
 if ($_SESSION[$sessionparams]['rdate'] == "") {
-    $message = '
+  $message = '
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -163,6 +163,11 @@ if ($_SESSION[$sessionparams]['rdate'] == "") {
         <th  style="text-align: left;padding:10px;">: ' . $id . '</th>
            </tr>
 
+           <tr style="border-bottom:2px solid #65707f;">
+        <th style=" text-align:right;padding:10px;"><b>Date of Booking</b></th>
+        <th  style="text-align: left;padding:10px;">: ' . $_SESSION[$sessionparams]['booked_date']  . '</th>
+           </tr>
+
              <tr>
         <th style=" text-align:right;padding:10px;"><b>Pickup From</b></th>
         <th  style="text-align: left;padding:10px;">: ' . $_SESSION[$sessionparams]['pick'] . '</th>
@@ -171,10 +176,14 @@ if ($_SESSION[$sessionparams]['rdate'] == "") {
         <th style=" text-align:right;padding:10px;"><b>Dropoff To</b></th>
         <th  style="text-align: left;padding:10px;">: ' . $_SESSION[$sessionparams]['drop'] . '</th>
       </tr>
-             <tr>
+           
+      
+      <tr>
         <th style=" text-align:right;padding:10px;"><b>Via Point</b></th>
         <th  style="text-align: left;padding:10px;">:' . $_SESSION[$sessionparams]['via'] . '</th>
       </tr>
+
+
              <tr>
         <th style=" text-align:right;padding:10px;"><b>Full pickup Address</b></th>
         <th  style="text-align: left;padding:10px;">: ' . $_SESSION[$sessionparams]['address1'] . '</th>
@@ -250,42 +259,38 @@ if ($_SESSION[$sessionparams]['rdate'] == "") {
 
 ';
 
-    if (1) {
+  if (1) {
 
-        $subject = "Booking Information : Reference Id (" . $id . ")";
+    $subject = "Booking Information : Reference Id (" . $id . ")";
 
-        // Always set content-type when sending HTML email
-        $headers = "";
-        $headers .= "From: Minicabee <bookings@" . $_SERVER['HTTP_HOST'] . "> \r\n";
-        $headers .= "Reply-To: Minicabee   <bookings@" . $_SERVER['HTTP_HOST'] . "> \r\n" . "X-Mailer: PHP/" . phpversion();
-        $headers .= "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\b";
-
-
-
-
-        $smail = mail($_SESSION[$sessionparams]['mail'], $subject, $message, $headers);
-
-        if($smail)
-        {
-            echo("suc");
-        }else{
-            echo("fail");
-        }
-        // $p="minicabee@gmail.com";
-        // mail($p,$subject,$message,$headers);
+    // Always set content-type when sending HTML email
+    $headers = "";
+    $headers .= "From: Minicabee <bookings@" . $_SERVER['HTTP_HOST'] . "> \r\n";
+    $headers .= "Reply-To: Minicabee   <bookings@" . $_SERVER['HTTP_HOST'] . "> \r\n" . "X-Mailer: PHP/" . phpversion();
+    $headers .= "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\b";
 
 
 
+
+    $smail = mail($_SESSION[$sessionparams]['mail'], $subject, $message, $headers);
+
+    if ($smail) {
+      echo ("suc");
+    } else {
+      echo ("fail");
     }
+    $p = "minicabee@gmail.com";
+    mail($p, $subject, $message, $headers);
+  }
 } else {
 
-    $fare = $_SESSION[$sessionparams]['selected_fare'] / 2;
-    $dfare = $fare / 100;
-    $dfare = $dfare * 75;
-    $dfare = number_format($dfare, 2);
-    $fare = number_format($fare, 2);
-    $message = '
+  $fare = $_SESSION[$sessionparams]['selected_fare'] / 2;
+  $dfare = $fare / 100;
+  $dfare = $dfare * 75;
+  $dfare = number_format($dfare, 2);
+  $fare = number_format($fare, 2);
+  $message = '
 
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -431,7 +436,11 @@ if ($_SESSION[$sessionparams]['rdate'] == "") {
         <th style=" text-align:right;padding:10px;"><b>Reference Id</b></th>
         <th  style="text-align: left;padding:10px;">: ' . $id . '</th>
            </tr>
-
+           <tr style="border-bottom:2px solid #65707f;">
+           <th style=" text-align:right;padding:10px;"><b>Date of Booking</b></th>
+           <th  style="text-align: left;padding:10px;">: ' . $_SESSION[$sessionparams]['booked_date']  . '</th>
+              </tr>
+   
              <tr>
         <th style=" text-align:right;padding:10px;"><b>Pickup From</b></th>
         <th  style="text-align: left;padding:10px;">: ' . $_SESSION[$sessionparams]['pick'] . '</th>
@@ -463,7 +472,7 @@ if ($_SESSION[$sessionparams]['rdate'] == "") {
       </tr>
                  <tr>
         <th style=" text-align:right;padding:10px;"><b>Luggages</b></th>
-        <th  style="text-align: left;padding:10px;">: ' . $nl . '</th>
+        <th  style="text-align: left;padding:10px;">: ' .  $_SESSION[$sessionparams]['nl'] . '</th>
       </tr>
                  <tr style="border-bottom:2px solid #65707f;">
         <th style=" text-align:right;padding:10px;"><b>Cab Type</b></th>
@@ -520,31 +529,28 @@ if ($_SESSION[$sessionparams]['rdate'] == "") {
 
 
 
-    if (1) {
+  if (1) {
 
-        $subject = "Booking Information : Reference Id (" . $id . ")";
+    $subject = "Booking Information : Reference Id (" . $id . ")";
 
-        // Always set content-type when sending HTML email
-        $headers = "";
-        $headers .= "From: Minicabee <bookings@" . $_SERVER['HTTP_HOST'] . "> \r\n";
-        $headers .= "Reply-To: Minicabee   <bookings@" . $_SERVER['HTTP_HOST'] . "> \r\n" . "X-Mailer: PHP/" . phpversion();
-        $headers .= "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\b";
-
-
-
-
-        $smail = mail($_SESSION[$sessionparams]['mail'], $subject, $message, $headers);
-
-        // $p="minicabee@gmail.com";
-        // mail($p,$subject,$message,$headers);
+    // Always set content-type when sending HTML email
+    $headers = "";
+    $headers .= "From: Minicabee <bookings@" . $_SERVER['HTTP_HOST'] . "> \r\n";
+    $headers .= "Reply-To: Minicabee   <bookings@" . $_SERVER['HTTP_HOST'] . "> \r\n" . "X-Mailer: PHP/" . phpversion();
+    $headers .= "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\b";
 
 
 
-    }
+
+    $smail = mail($_SESSION[$sessionparams]['mail'], $subject, $message, $headers);
+
+    $p = "minicabee@gmail.com";
+    mail($p, $subject, $message, $headers);
+  }
 
 
-    $message = '
+  $message = '
 
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -691,6 +697,11 @@ if ($_SESSION[$sessionparams]['rdate'] == "") {
         <th  style="text-align: left;padding:10px;">: ' . $rid . '</th>
            </tr>
 
+           <tr style="border-bottom:2px solid #65707f;">
+           <th style=" text-align:right;padding:10px;"><b>Date of Booking</b></th>
+           <th  style="text-align: left;padding:10px;">: ' . $_SESSION[$sessionparams]['booked_date']  . '</th>
+              </tr>
+   
              <tr>
         <th style=" text-align:right;padding:10px;"><b>Pickup From</b></th>
         <th  style="text-align: left;padding:10px;">: ' . $_SESSION[$sessionparams]['rpick'] . '</th>
@@ -779,20 +790,20 @@ if ($_SESSION[$sessionparams]['rdate'] == "") {
 
 
 
-    if (1) {
+  if (1) {
 
-        $subject = "Booking Information : Reference Id (" . $rid . ")";
+    $subject = "Booking Information : Reference Id (" . $rid . ")";
 
-        // Always set content-type when sending HTML email
-        $headers = "";
-        $headers .= "From: Minicabee <bookings@" . $_SERVER['HTTP_HOST'] . "> \r\n";
-        $headers .= "Reply-To: Minicabee   <bookings@" . $_SERVER['HTTP_HOST'] . "> \r\n" . "X-Mailer: PHP/" . phpversion();
-        $headers .= "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\b";
-
-
+    // Always set content-type when sending HTML email
+    $headers = "";
+    $headers .= "From: Minicabee <bookings@" . $_SERVER['HTTP_HOST'] . "> \r\n";
+    $headers .= "Reply-To: Minicabee   <bookings@" . $_SERVER['HTTP_HOST'] . "> \r\n" . "X-Mailer: PHP/" . phpversion();
+    $headers .= "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\b";
 
 
-        $smail = mail($_SESSION[$sessionparams]['mail'], $subject, $message, $headers);
-    }
+
+
+    $smail = mail($_SESSION[$sessionparams]['mail'], $subject, $message, $headers);
+  }
 }
