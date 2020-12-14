@@ -58,7 +58,93 @@ if(strtoupper($_POST['trip']) == 'ROUND' )
 
     
 
+$_SESSION[$randomString]['fare_calc']='y';
 
+if($_SESSION[$randomString]['pick_pc'] == 'ga' && $_SESSION[$randomString]['drop_pc'] != '')
+{
+   $post_code = $_SESSION[$randomString]['drop_pc'];
+        $_SESSION[$randomString]['post_code']=$post_code;
+       $_SESSION[$randomString]['get_fare_func']='exec';
+       
+      $result_fare=mysqli_query($conn,"SELECT count(fare) as total FROM `fareTableFromGatwick` WHERE `postcode_search` like '".$post_code."%' ORDER by fare desc");
+$rows_fare= mysqli_fetch_array($result_fare,MYSQLI_ASSOC);
+ $_SESSION[$randomString]['get_fare_func_total']=$rows_fare["total"];
+     if($rows_fare["total"] > 0)
+     {
+          $_SESSION[$randomString]['fare_calc']='n';
+          
+                $result_fixed=mysqli_query($conn,"SELECT distinct `fare` FROM `fareTableFromGatwick` WHERE `postcode_search` like '".$post_code."%' ORDER by fare desc");
+$rows_fixed= mysqli_fetch_array($result_fixed,MYSQLI_ASSOC);
+           $_SESSION[$randomString]['fixed_fare']=$rows_fixed["fare"];
+    
+     }else
+     {
+          $_SESSION[$randomString]['fare_calc']='y';
+        
+     }
+   
+}
+else if ($_SESSION[$randomString]['drop_pc'] == 'ga' && $_SESSION[$randomString]['pick_pc'] != '' )
+{
+     $post_code = $_SESSION[$randomString]['pick_pc'];
+          $_SESSION[$randomString]['post_code']=$post_code;
+       $_SESSION[$randomString]['get_fare_func']='exec';
+      
+       $result_fare=mysqli_query($conn,"SELECT count(fare) as total FROM `fareTableFromGatwick` WHERE `postcode_search` like '".$post_code."%' ORDER by fare desc");
+$rows_fare= mysqli_fetch_array($result_fare,MYSQLI_ASSOC);
+ $_SESSION[$randomString]['get_fare_func_total']=$rows_fare["total"];
+     if($rows_fare["total"] > 0)
+     {
+          $_SESSION[$randomString]['fare_calc']='n';
+          
+                $result_fixed=mysqli_query($conn,"SELECT distinct `fare` FROM `fareTableFromGatwick` WHERE `postcode_search`like '".$post_code."%' ORDER by fare desc");
+$rows_fixed= mysqli_fetch_array($result_fixed,MYSQLI_ASSOC);
+           $_SESSION[$randomString]['fixed_fare']=$rows_fixed["fare"];
+    
+     }else
+     {
+          $_SESSION[$randomString]['fare_calc']='y';
+         
+     }
+}
+
+// function getFare($post_code){
+
+// }
+
+   $_SESSION[$randomString]['fare_increment']=0;
+      $_SESSION[$randomString]['fare_increment_type']="add";
+      
+   $_SESSION[$randomString]['fare_return_increment']=0;
+      $_SESSION[$randomString]['fare_return_increment_type']="add";
+
+$query_single_special="SELECT `incrementType`, `incrementVal` FROM `fare_changer` WHERE `monthVal`='".$month_qry."' AND `dateVal` = '".$date_qry."' AND `timeFrom` <= '".$time_qry."' AND `timeTo` >= '".$time_qry."' AND (`yearsVal` LIKE  '%".$years_qry."%' OR `yearsVal` = 'ALL')";
+$result_single_special=mysqli_query($conn,$query_single_special);
+
+
+echo($query_single_special."<br>");
+$rowCount=mysqli_num_rows($result_single_special);
+if($rowCount > 0)
+{
+    $rows_fare_special= mysqli_fetch_array($result_single_special,MYSQLI_ASSOC);
+      $_SESSION[$randomString]['fare_increment']=$rows_fare_special["incrementVal"];
+      $_SESSION[$randomString]['fare_increment_type']=$rows_fare_special["incrementType"];
+}
+
+
+    $query_return_special="SELECT `incrementType`, `incrementVal` FROM `fare_changer` WHERE `monthVal`='".$month_ret_qry."' AND `dateVal` = '".$date_ret_qry."' AND `timeFrom` <= '".$time_ret_qry."' AND `timeTo` >= '".$time_ret_qry."' AND (`yearsVal` LIKE  '%".$year_ret_qry."%' OR `yearsVal` = 'ALL')";
+$result_return_special=mysqli_query($conn,$query_return_special);
+
+
+echo($query_return_special."<br>");
+
+$rowCount=mysqli_num_rows($result_return_special);
+if($rowCount > 0)
+{
+    $rows_fare_special= mysqli_fetch_array($result_return_special,MYSQLI_ASSOC);
+         $_SESSION[$randomString]['fare_return_increment']=$rows_fare_special["incrementVal"];
+      $_SESSION[$randomString]['fare_return_increment_type']=$rows_fare_special["incrementType"];
+}
 
 
 include('get_distance.php');
