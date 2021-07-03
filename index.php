@@ -762,11 +762,11 @@ $('#datetimepicker').val(tempDate);
     });
 	</script>
 
-<script>
+<!-- <script>
 	 $("#plpicker").focus(function(){
         $('.pl-popup').show();
      }
-        </script>
+        </script> -->
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
