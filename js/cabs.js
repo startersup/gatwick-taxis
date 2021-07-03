@@ -148,11 +148,11 @@ function ViewMyCabs(element)
 
         addcontent = addcontent + '    <div class="col-md-4">                                                                                            ';
         addcontent = addcontent + '                           <div class="quote-card top-margin">                                                        ';
-        addcontent = addcontent + '                               <div class="float-card">10% Discount</div>                                             ';
+        addcontent = addcontent + '                              <div class="popover-wrapper"><div class="float-card">Safety <sup>+</sup> <i>Assured</i></div>  <div class="popover-content">  <h3>COVID-19 Safety Measures</h3>  <p class="popover-message">We ensure to provide safe and clean Taxis and Minicabs for customers.</p></div></div>                                            ';
         addcontent = addcontent + '                               <div class="img-med-bar">                                                              ';
         addcontent = addcontent + '                                   <img src="../images/'+imagepath+'.png" style="max-width:200px;width:100%;">        ';
         addcontent = addcontent + '                               </div>                                                                                 ';
-        addcontent = addcontent + '                               <p class="fleet-name">GT Provider #23</p>                                              ';
+        addcontent = addcontent + '                               <p class="fleet-name">GT Provider #'+objPartners[i]+'</p>                                              ';
         addcontent = addcontent + '                               <div class="gt-star-rate">                                                             ';
         addcontent = addcontent + strRating;
         addcontent = addcontent + '                               </div>                                                                                 ';

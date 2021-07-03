@@ -62,3 +62,7 @@ var HostName = window.location.host;
 var Protocol = window.location.protocol;
 var LocationUrl = "";
 LocationUrl = Protocol + "//" + HostName + "/";
+
+
+
+
