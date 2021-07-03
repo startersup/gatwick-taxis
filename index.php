@@ -136,16 +136,16 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                                 <div class="col-md-1 nopadding">
                                 <select class="select" name="" id="ways" required>
                                     <option value="one Way">One Way</option>
-                                   <option value="Round Trip">Round Trip</option> 
+                                   <option value="Two Way">Two Way</option> 
                                 </select>
                                 </div>
-                            <div class="col-md-3 nopadding">
+                            <div class="col-md-2 nopadding">
                                 <input type="text" name="pick" id="autocomplete" placeholder="Pickup Postcode" autocomplete="off" required>
                                  <input type="hidden" name="pick_pc" id="autocomplete_pc" >
                                  
                             </div>
                         
-                            <div class="col-md-3 nopadding">
+                            <div class="col-md-2 nopadding">
                                 <input type="text" name="drop" id="autocomplete2" autocomplete="off" placeholder="Dropoff Postcode" required>
                                    <input type="hidden" name="drop_pc" id="autocomplete2_pc" >
                             </div>
