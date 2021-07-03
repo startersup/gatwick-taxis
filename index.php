@@ -9,39 +9,36 @@ include($spath);
 <!DOCTYPE html>
 <html lang="en">
 
-    <title>Gatwick Taxis | Book Cheap and Comfortable Taxis & Cabs</title>
+    <title>Gatwick TaxiHub | Book Cheap and Comfortable Taxis & Cabs</title>
     <link rel="icon" href="../images/favicon.png" type="image/gif" sizes="16x16">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Looking for cheap and Reliable Taxi Service in Gatwick Airport, Find cheaper Gatwick taxis deals and book now with exiciting discounts,Cheaper than any other service providers, safer than what you expect. call us at :+44 1293344804." />
-    <meta name="keywords" content="UK,Gatwick Taxis, Quote, Minicabs, Booking, Airport, Stations , Shuttle, Rail, Best, Reliable,Safe, Cabs, Fare, Price ,Compare, London , Transfers, Services, Transportation, Chauffeur, Cars, Station, To, From, Seaport, Cruises, Gatwick, Stansted ,Cheap, Hire, Firm, Punctual, Reliable, Fixed, Cost, Low, On line, Local Taxi, Local Taxi-Cab Service, Executive, Luxury, Numbers, Taxi Fares Calculator, Area, PostCodes, Cheaper, Compares, Professional, Licensed, Companies, Towns, Pick up, Drop off, Cabs, airport, taxis, minicabs, cheap, fares, how, much, does, a taxi cost from, Instant, Pre Book" />
-    <meta name="abstract" content="Gatwick Taxis | Book cheap Taxis to Gatwick Airport Online">
-    <meta name="subject" content="Gatwick Taxis | Book cheap Taxis to Gatwick Airport Online">
-    <link href="https://www.facebook.com/MiniCabee-540741142988885/" itemprop="sameAs" id="facebook">
-    <link href="https://twitter.com/minicabee" itemprop="sameAs" id="twitter">
+    <meta name="description" content="Looking for cheap and Reliable Taxi Service in Gatwick Airport, Find cheaper Gatwick TaxiHub deals and book now with exiciting discounts,Cheaper than any other service providers, safer than what you expect. call us at :+44 1293344804." />
+    <meta name="keywords" content="UK,Gatwick TaxiHub, Quote, Minicabs, Booking, Airport, Stations , Shuttle, Rail, Best, Reliable,Safe, Cabs, Fare, Price ,Compare, London , Transfers, Services, Transportation, Chauffeur, Cars, Station, To, From, Seaport, Cruises, Gatwick, Stansted ,Cheap, Hire, Firm, Punctual, Reliable, Fixed, Cost, Low, On line, Local Taxi, Local Taxi-Cab Service, Executive, Luxury, Numbers, Taxi Fares Calculator, Area, PostCodes, Cheaper, Compares, Professional, Licensed, Companies, Towns, Pick up, Drop off, Cabs, airport, taxis, minicabs, cheap, fares, how, much, does, a taxi cost from, Instant, Pre Book" />
+    <meta name="abstract" content="Gatwick TaxiHub | Book cheap Taxis to Gatwick Airport Online">
+    <meta name="subject" content="Gatwick TaxiHub | Book cheap Taxis to Gatwick Airport Online">
+    <!-- <link href="https://www.facebook.com/" itemprop="sameAs" id="facebook">
+    <link href="https://twitter.com/" itemprop="sameAs" id="twitter"> -->
     <meta itemscope itemtype="https://schema.org/WebSite" itemref="sitename sitelink facebook twitter">
-    <meta itemprop="name" content="Gatwick Taxis" id="sitename">
-    <link href="https://minicabee.co.uk/" itemprop="url" id="sitelink">
+    <meta itemprop="name" content="Gatwick TaxiHub" id="sitename">
+    <link href="https://gatwicktaxihub.com/" itemprop="url" id="sitelink">
     <meta name="og:site_name" content="gatwick-airporttaxis.com">
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Gatwick Taxis | Book cheap Taxis to Gatwick Airport Online" />
+    <meta property="og:title" content="Gatwick TaxiHub | Book cheap Taxis to Gatwick Airport Online" />
     <meta property="og:description" content=" Compare and Book cheap Taxis and Minicabs online, gatwick chepeast taxis now with exciting discounts" />
-    <meta property="og:image" content="https://gatwick-airporttaxis.com/assets/images/gatwick-taxis-home.png" />
+    <meta property="og:image" content="https://gatwicktaxihub.com/assets/images/gatwick-taxis-home.png" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@MiniCabee" />
     <meta name="twitter:title" content="Minicabee | Book Cheap Taxis & Minicabs Online" />
     <meta name="twitter:description" content=" Compare and Book cheap Taxis and Minicabs online, gatwick chepeast taxis at minicabee" />
-    <meta name="twitter:image" content="https://minicabee.co.uk/assets/images/logo.png" />
+    <meta name="twitter:image" content="https://gatwicktaxihub.com/assets/images/logo.png" />
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/indexjs.js"></script>
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Muli|Niramit|Open+Sans|Roboto" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
@@ -83,7 +80,7 @@ include($spath);
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">Gatwick <span>Taxis</span></a>
+                <a class="navbar-brand" href="/"><img class="gth-logo" src="./images/logo.png"></a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav center-nav">
@@ -129,7 +126,7 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
         </div>
     </nav>
     <section class="banner cr-mask">
-        <h1 class="header margintop">Cheap Gatwick Taxis & Minicab Quote </h1>
+        <h1 class="header margintop">Cheap Gatwick TaxiHub & Minicab Quote </h1>
        <p class="center-txt hidden-xs">Compare 100's of Cheap Taxi Provider Quotes and Book the cheapest of all with additional 10% discount on airport Trips</p>
         <center><a href="tel:+441293344804"><button class="xs-button"><i class="fa fa-phone"></i> Call us : 01293344804</button></a></center>
         <div class="gt-container">
@@ -276,11 +273,11 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
     </section>
     <section class="about-croydon">
         <div class="container">
-            <h3>Get a Quote & Book Taxis / Minicabs - Gatwick Taxis
+            <h3>Get a Quote & Book Taxis / Minicabs - Gatwick TaxiHub
             </h3><br><br>
             <div class="row ">
                 <div class="col-md-6">
-                    <p class="para">Looking for the cheapest and safest taxi service in gatwick airport? Gatwick Taxis is the one stop solution for making your travel safer and cheaper, we have special discounts in Airport Transfer services in the Gatwick city, the cost is comparetively cheaper than the other Cab service providers. Compare taxi fare rates and select the best one. Gatwick Taxis make your travel very smooth and compact with 100 % perfect time management with Good quality taxi services. Gatwick Taxis is Providing the Taxi services in all nearby locations and long distances and Pick-up ,Drop-off in all over UK. Our services are available all Airports, Train Stations ,Sea ports, Hotels, Bars, Restaurants, Schools, Colleges, Universities, Shopping Malls in Gatwick, London and all over UK . customers can book their taxis from anywhere the pick-up and Drop-offs in UK, we are always ready to give a high quality taxi services in UK at 24/7 .Get Special offers and discounts on every taxi bookings.
+                    <p class="para">Looking for the cheapest and safest taxi service in gatwick airport? Gatwick TaxiHub is the one stop solution for making your travel safer and cheaper, we have special discounts in Airport Transfer services in the Gatwick city, the cost is comparetively cheaper than the other Cab service providers. Compare taxi fare rates and select the best one. Gatwick TaxiHub make your travel very smooth and compact with 100 % perfect time management with Good quality taxi services. Gatwick TaxiHub is Providing the Taxi services in all nearby locations and long distances and Pick-up ,Drop-off in all over UK. Our services are available all Airports, Train Stations ,Sea ports, Hotels, Bars, Restaurants, Schools, Colleges, Universities, Shopping Malls in Gatwick, London and all over UK . customers can book their taxis from anywhere the pick-up and Drop-offs in UK, we are always ready to give a high quality taxi services in UK at 24/7 .Get Special offers and discounts on every taxi bookings.
                     </p>
                    <a href="./about/"> <button class="small-button">Read More</button></a>
                 </div>
@@ -606,7 +603,7 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
   "url": "https://gatwick-airporttaxis.com",
   "image": "https://gatwick-airporttaxis.com/images/croydon-airport.svg",
   "description": "Gatwick Airport Cheap Taxis and Minicabs Online",
-  "brand": "Gatwick taxis Booking",
+  "brand": "Gatwick TaxiHub Booking",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.4",
