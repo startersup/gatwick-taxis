@@ -233,44 +233,58 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                                 <input type="text" class="gth-pl" tabindex="1" placeholder="Passengers & Luggages"
                                     autocomplete="off" id="plpicker" name="" required>
                                 <div class="pl-popup" style="display:none">
-
-                                    <ul>
+                                <ul>
                                         <li>
                                             <p>Passengers</p>
-                                            <div class="product-count">
-                                                <button class="button-count no-active" disabled>-</button>
-                                                <input type="text" readonly class="number-product" value="1">
-                                                <button class="button-count">+</button>
-                                            </div>
+
+                                            <select class="gth-select" name="np" required>
+                                                <option value="1"> 1 </option>
+                                                <option value="2"> 2  </option>
+                                                <option value="3"> 3 </option>
+                                                <option value="4"> 4 </option>
+                                                <option value="5"> 5 </option>
+                                                <option value="6"> 6 </option>
+                                                <option value="7"> 7 </option>
+                                                <option value="8"> 8 </option>
+                                                <option value="9"> 9 </option>
+                                                <option value="10"> 10 </option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <p>Luggage (Hand)</p>
+                                            <select class="gth-select" name="nl" data-toggle="tooltip" data-placement="auto"
+                                        required>
+                                        <option value="1" selected> 0 </option>
+                                        <option value="1"> 1 </option>
+                                        <option value="2"> 2  </option>
+                                        <option value="3"> 3 </option>
+                                        <option value="4"> 4 </option>
+                                        <option value="5"> 5 </option>
+                                        <option value="6"> 6 </option>
+                                        <option value="7"> 7 </option>
+                                        <option value="8"> 8 </option>
+                                        <option value="9"> 9 </option>
+                                        <option value="10"> 10 </option>
+                                    </select>
+                                        </li>
+                                        <li>
+                                            <p>Suitcase</p>
+                                            <select class="gth-select" name="nl" data-toggle="tooltip" data-placement="auto"
+                                            required>
+                                            <option value="1" selected> 0 </option>
+                                            <option value="1"> 1 </option>
+                                            <option value="2"> 2  </option>
+                                            <option value="3"> 3 </option>
+                                            <option value="4"> 4 </option>
+                                            <option value="5"> 5 </option>
+                                            <option value="6"> 6 </option>
+                                            <option value="7"> 7 </option>
+                                            <option value="8"> 8 </option>
+                                            <option value="9"> 9 </option>
+                                            <option value="10"> 10 </option>
+                                        </select>
                                         </li>
                                     </ul>
-
-                                    <select class="select gt-luggages" name="np" required>
-                                        <option value="1"> 1 &#xf007;</option>
-                                        <option value="2"> 2 &#xf007; </option>
-                                        <option value="3"> 3 &#xf007;</option>
-                                        <option value="4"> 4 &#xf007;</option>
-                                        <option value="5"> 5 &#xf007;</option>
-                                        <option value="6"> 6 &#xf007;</option>
-                                        <option value="7"> 7 &#xf007;</option>
-                                        <option value="8"> 8 &#xf007;</option>
-                                        <option value="9"> 9 &#xf007;</option>
-                                        <option value="10"> 10 &#xf007;</option>
-                                    </select>
-                                    <select class="select" name="nl" data-toggle="tooltip" data-placement="auto"
-                                        required>
-                                        <option value="1" selected> 0 &#xf0f2;</option>
-                                        <option value="1"> 1 &#xf0f2;</option>
-                                        <option value="2"> 2 &#xf0f2; </option>
-                                        <option value="3"> 3 &#xf0f2;</option>
-                                        <option value="4"> 4 &#xf0f2;</option>
-                                        <option value="5"> 5 &#xf0f2;</option>
-                                        <option value="6"> 6 &#xf0f2;</option>
-                                        <option value="7"> 7 &#xf0f2;</option>
-                                        <option value="8"> 8 &#xf0f2;</option>
-                                        <option value="9"> 9 &#xf0f2;</option>
-                                        <option value="10"> 10 &#xf0f2;</option>
-                                    </select>
                                 </div>
                             </div>
                             <div class="col-md-2 nopadding">
