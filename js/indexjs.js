@@ -100,7 +100,9 @@ $( "#applyPromo" ).click(function( event ){
     
 });
 
-
+$("#plpicker").focus(function(){
+    $('.pl-popup').show();
+ });
 
 });
 
