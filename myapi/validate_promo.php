@@ -1,9 +1,29 @@
 <?php
 
-
+session_start();
 $promo = $_POST['promo'];
-$fare = $_POST['fare'];
-$sessionparams=$_POST['q'];
+
+$sessionparams=$_REQUEST['q'];
+echo($sessionparams);
+$response["dummy"]=$_SESSION[$sessionparams]['selected_fare'];
+
+$query_session ="Select record from `session_table` where `id` = '".$sessionparams."'";
+
+$result_session=  mysqli_query($conn_site,$query_session);
+
+$row_session= mysqli_fetch_array($result_session,MYSQLI_ASSOC);
+
+$session_var =$row_session["record"];
+$output_session = json_decode($session_var);
+
+$selected_fare = $output_session->{"selected_fare"};
+
+$result=mysqli_query($conn,"select * from mypromos where siteurl = '".$_SERVER["HTTP_HOST"]."' and fromdate >".$today."and todate < ".$today);
+
+echo json_encode($result);
+$row= mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+$_SESSION[$sessionparams][""]
 
 if($_SESSION[$sessionparams]['promo'] !=="" )
 {
@@ -36,6 +56,8 @@ else
 }
 
 }
+
+*/
 echo json_encode($response);
 
 ?>

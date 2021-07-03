@@ -18,24 +18,41 @@ $_SESSION[$randomString]['via']= $_POST['via'];
 $_SESSION[$randomString]['np'] = $_POST['np']; 
 $_SESSION[$randomString]['nl']=$_POST['nl']; 
 
+
+
+$_SESSION[$randomString]['pick_pc'] = $_POST['pick_pc'];
+$_SESSION[$randomString]['drop_pc'] = $_POST['drop_pc'];
+
+
 $x=explode(" ",$_POST['date']); 
 
-$_SESSION[$randomString]['date']=$x[2]."-".$x[1]."-".$x[0];
+$_SESSION[$randomString]['date']=$x[0]."-".$x[1]."-".$x[2];
 
 $_SESSION[$randomString]['hrs']=$x[3];
 $_SESSION[$randomString]['min']=$x[4];
 
+$month_qry=$x[1];
+$date_qry=$x[2];
+$years_qry=$x[0];
+
+$time_qry=$x[3].":".$x[4];
 
 if(strtoupper($_POST['trip']) == 'ROUND' ) 
 {
     
     $x=explode(" ",$_POST['rdate']); 
     
-    $_SESSION[$randomString]['rdate']=$x[2]."-".$x[1]."-".$x[0];
+    $_SESSION[$randomString]['rdate']=$x[0]."-".$x[1]."-".$x[2];
     
+        $month_ret_qry=$x[1];
+$date_ret_qry=$x[2];
+$year_ret_qry=$x[0];
     
     $_SESSION[$randomString]['rhrs']=$x[3];
     $_SESSION[$randomString]['rmin']=$x[4];
+    
+     $time_ret_qry=$x[3].":".$x[4];
+    
     
     $_SESSION[$randomString]['rnp'] = $_POST['rnp']; 
     $_SESSION[$randomString]['rnl']=$_POST['rnl']; 
@@ -55,10 +72,7 @@ if(strtoupper($_POST['trip']) == 'ROUND' )
         $_SESSION[$randomString]['rdrop']="";
 }
 
-
-    
-
-$_SESSION[$randomString]['fare_calc']='y';
+   $_SESSION[$randomString]['fare_calc']='y';
 
 if($_SESSION[$randomString]['pick_pc'] == 'ga' && $_SESSION[$randomString]['drop_pc'] != '')
 {
@@ -122,7 +136,7 @@ $query_single_special="SELECT `incrementType`, `incrementVal` FROM `fare_changer
 $result_single_special=mysqli_query($conn,$query_single_special);
 
 
-echo($query_single_special."<br>");
+// echo($query_single_special."<br>");
 $rowCount=mysqli_num_rows($result_single_special);
 if($rowCount > 0)
 {
@@ -136,7 +150,7 @@ if($rowCount > 0)
 $result_return_special=mysqli_query($conn,$query_return_special);
 
 
-echo($query_return_special."<br>");
+// echo($query_return_special."<br>");
 
 $rowCount=mysqli_num_rows($result_return_special);
 if($rowCount > 0)
@@ -145,18 +159,21 @@ if($rowCount > 0)
          $_SESSION[$randomString]['fare_return_increment']=$rows_fare_special["incrementVal"];
       $_SESSION[$randomString]['fare_return_increment_type']=$rows_fare_special["incrementType"];
 }
+    
+
+
 
 
 include('get_distance.php');
 
 $record = json_encode($_SESSION[$randomString]);
 
-
+// echo($record);
 
 $x = mysqli_query($conn_site,"INSERT INTO `session_table` (`id`, `record`) VALUES ('$randomString', '$record')") ;
     
 $path =$link."://". $_SERVER['HTTP_HOST']."/quotes/?q=".$randomString;
 
-echo("<script>window.location='$path';</script>");
+ echo("<script>window.location='$path';</script>");
 
 ?>

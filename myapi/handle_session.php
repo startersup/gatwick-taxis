@@ -5,6 +5,12 @@ session_start();
 $spath = $_SERVER['DOCUMENT_ROOT']."/connection/connect.php";
 include($spath);
 $sessionparams=$_REQUEST['q'];
+
+
+
+date_timezone_set('Europe/London');
+
+
 if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') 
     $link = "https"; 
 else
@@ -41,14 +47,16 @@ $_SESSION[$sessionparams]['num2']=$_POST['num2'];
 $_SESSION[$sessionparams]['info']=$_POST['info'];
 $_SESSION[$sessionparams]['pay']=$_POST['pay'];
 
+// $result=mysqli_query($conn,"SELECT refid from register WHERE `refid` = '".$ran."'");
+
 $code==0;
   while($code==0)
 {
 $ran=mt_rand(1000,99999);
-$ret="RET".$ran;
-$ran="TXO".$ran;
+$ret= $_SESSION["site_info"]["bookingId"].$ran."R";
+$ran= $_SESSION["site_info"]["bookingId"].$ran;
 
-$result=mysqli_query($conn,"SELECT * from register WHERE `refid` = '".$ran."'");
+$result=mysqli_query($conn,"SELECT refid from register WHERE `refid` = '".$ran."'");
  $rowcount=mysqli_num_rows($result);
 
     if($rowcount == 0)
@@ -59,6 +67,17 @@ $result=mysqli_query($conn,"SELECT * from register WHERE `refid` = '".$ran."'");
 }
 
 $status="booked";
+
+if($_SESSION[$sessionparams]['meet'] != '' && $_SESSION[$sessionparams]['meet'] != 0)
+{
+  $_SESSION[$sessionparams]['selected_fare']=$_SESSION[$sessionparams]['selected_fare']+ $_SESSION[$sessionparams]['meet'];
+}
+
+if($_SESSION[$sessionparams]['child'] != '' && $_SESSION[$sessionparams]['child'] != 0)
+{
+  $_SESSION[$sessionparams]['selected_fare']=$_SESSION[$sessionparams]['selected_fare']+ $_SESSION[$sessionparams]['child'];
+}
+
 $fare = $_SESSION[$sessionparams]['selected_fare'];
      $dfare=$fare/100;
       $dfare=$dfare*75;
@@ -76,15 +95,13 @@ $via=$_SESSION[$sessionparams]['via'];
 $np=$_SESSION[$sessionparams]['np'];
 $nl=$_SESSION[$sessionparams]['nl'];
 $date=$_SESSION[$sessionparams]['date'];
-$hrs=$_SESSION[$sessionparams]['hrs'];
-$min=$_SESSION[$sessionparams]['min'];
+$time=$_SESSION[$sessionparams]['time'];
 $rpick=$_SESSION[$sessionparams]['rpick'];
 $rdrop=$_SESSION[$sessionparams]['rdrop'];
 $rnp=$_SESSION[$sessionparams]['rnp'];
 $rnl=$_SESSION[$sessionparams]['rnl'];
 $rdate=$_SESSION[$sessionparams]['rdate'];
-$rhrs=$_SESSION[$sessionparams]['rhrs'];
-$rmin=$_SESSION[$sessionparams]['rmin'];
+$rtime=$_SESSION[$sessionparams]['rtime'];
 $return=$_SESSION[$sessionparams]['return'];
 
 $address1=$_SESSION[$sessionparams]['address1'];
@@ -102,6 +119,14 @@ $pay=$_SESSION[$sessionparams]['pay'];
 $selected=$_SESSION[$sessionparams]['selected'];
 $selected_type=$_SESSION[$sessionparams]['selected_type'];
 $selected_fare=$_SESSION[$sessionparams]['selected_fare'];
+$original_fare=$_SESSION[$sessionparams]['original_fare'];
+
+$booked_date = date("d-m-Y H:i:s");  
+$_SESSION[$sessionparams]['booked_date']=$booked_date;
+
+$siteName=$_SESSION["site_info"]["siteName"];
+
+
 
 if($_SESSION[$sessionparams]['rpick']!=="")
 {
@@ -114,14 +139,14 @@ if($_SESSION[$sessionparams]['rpick']!=="")
 
 	
 
-$sql = "INSERT INTO `register` (`refid`, `name`, `mail`, `num1`, `num2`, `location`, `info`, `pay`, `src`, `des`,`address1`,`address2`, `dt`, `time`, `passenger`, `luggage`, `type`, `agency`, `jtime`, `fare`, `status`, `via`, `dfare`, `mg`, `ceat`, `miles`) VALUES 
-						('$ret', '$name', '$mail', '$num1', '$num2', '$location', '$info', '$pay', '$rpick', '$rdrop','$raddress1','$raddress2', '$rdate', '$rtime', '$rnp', '$rnl', '$selected_type', '$selected', '$totaltimecon', '$fare', '$status', '$rvia', '$dfare', '$meet', '$child', '$totaldistancecon')";
+$sql = "INSERT INTO `register` (`refid`, `name`, `mail`, `num1`, `num2`, `location`, `info`, `pay`, `src`, `des`,`address1`,`address2`, `dt`, `time`, `passenger`, `luggage`, `type`, `agency`, `jtime`, `fare`, `status`, `via`, `dfare`, `mg`, `ceat`, `miles`,`booked_date`, `booked_site`) VALUES 
+						('$ret', '$name', '$mail', '$num1', '$num2', '$location', '$info', '$pay', '$rpick', '$rdrop','$raddress1','$raddress2', '$rdate', '$rtime', '$rnp', '$rnl', '$selected_type', '$selected', '$totaltimecon', '$fare', '$status', '$rvia', '$dfare', '$meet', '$child', '$totaldistancecon','$booked_date','$siteName')";
 						
 						$result=mysqli_query($conn,$sql);
 }
 
-$sql = "INSERT INTO `register` (`refid`, `name`, `mail`, `num1`, `num2`, `location`, `info`, `pay`, `src`, `des`,`address1`,`address2`, `dt`, `time`, `passenger`, `luggage`, `type`, `agency`, `jtime`, `fare`, `status`, `via`, `dfare`, `mg`, `ceat`, `miles`) VALUES 
-						('$ran', '$name', '$mail', '$num1', '$num2', '$location', '$info', '$pay', '$pick', '$drop','$address1','$address2', '$date', '$time', '$np', '$nl', '$selected_type', '$selected', '$totaltimecon', '$fare', '$status', '$via', '$dfare', '$meet', '$child', '$totaldistancecon')";
+$sql = "INSERT INTO `register` (`refid`, `name`, `mail`, `num1`, `num2`, `location`, `info`, `pay`, `src`, `des`,`address1`,`address2`, `dt`, `time`, `passenger`, `luggage`, `type`, `agency`, `jtime`, `fare`, `status`, `via`, `dfare`, `mg`, `ceat`, `miles`,`booked_date`, `booked_site`) VALUES 
+						('$ran', '$name', '$mail', '$num1', '$num2', '$location', '$info', '$pay', '$pick', '$drop','$address1','$address2', '$date', '$time', '$np', '$nl', '$selected_type', '$selected', '$totaltimecon', '$fare', '$status', '$via', '$dfare', '$meet', '$child', '$totaldistancecon','$booked_date','$siteName')";
 						
 							$result=mysqli_query($conn,$sql);
 				
