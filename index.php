@@ -208,7 +208,7 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
 
                             <div class="col-md-2 nopadding">
                          
-                            <input type="text" class="gt-dp" tabindex="1" placeholder="Passengers & Luggages" autocomplete="off" id="plpicker" name="tempDate" required>
+                            <input type="text" class="gth-pl" tabindex="1" placeholder="Passengers & Luggages" autocomplete="off" id="plpicker" name="" required>
                             <div class="pl-popup" style="display:none">
                             <select class="select gt-luggages" name="np" required>
                                     <option value="1"> 1 &#xf007;</option>
