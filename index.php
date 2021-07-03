@@ -131,6 +131,7 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
         <center><a href="javascript:void(Tawk_API.toggle())"><button class="xs-button"><i class="fa fa-comment-dots"></i> Chat with Us</button></a></center>
         <div class="gt-container">
             <div class="card book">
+            <div class="gt-container">
                         <div class="row">
                             <form onsubmit=" DateSplitter();" action="/myapi/session_create.php" method="POST" id="info">
                                 <div class="col-md-1 nopadding">
@@ -142,9 +143,11 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                             <div class="col-md-2 nopadding">
                                 <input type="text" name="pick" id="autocomplete" placeholder="Pickup Postcode" autocomplete="off" required>
                                  <input type="hidden" name="pick_pc" id="autocomplete_pc" >
-                                 
                             </div>
                         
+                            <div class="col-md-1 nopadding">
+                                <button class="btn btn-success">Via +</button>
+                            </div>
                             <div class="col-md-2 nopadding">
                                 <input type="text" name="drop" id="autocomplete2" autocomplete="off" placeholder="Dropoff Postcode" required>
                                    <input type="hidden" name="drop_pc" id="autocomplete2_pc" >
@@ -203,9 +206,9 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                             </div>
 
 
-                            <div class="col-md-3 nopadding">
+                            <div class="col-md-2 nopadding">
                          
-                            <input type="text" class="gt-dp" tabindex="1" placeholder="Passengers & Luggages" autocomplete="off" id="pl-picker" name="tempDate" required>
+                            <input type="text" class="gt-dp" tabindex="1" placeholder="Passengers & Luggages" autocomplete="off" id="plpicker" name="tempDate" required>
                             <div class="pl-popup" style="display:none">
                             <select class="select gt-luggages" name="np" required>
                                     <option value="1"> 1 &#xf007;</option>
@@ -239,6 +242,7 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
 
                             </div>
                         </form>
+                      ß</div>
                         </div>
             </div>
             <div class="mc-features hidden-xs" id="mc-border">
@@ -759,8 +763,8 @@ $('#datetimepicker').val(tempDate);
 	</script>
 
 <script>
-	 $("#pl-picker").focus(function(){
-        $('.pl-popup').toggle();
+	 $("#plpicker").focus(function(){
+        $('.pl-popup').show();
      }
         </script>
 
