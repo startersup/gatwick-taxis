@@ -53,8 +53,8 @@ include($apipath."get_session.php");
             </div>
             <div class="col-md-4 nopadding">
                 <div class="map-overlay">
-                 <p><span>Total Miles :<?php echo($_SESSION[$sessionid]['totaldistancecon']." Miles"); ?></span></p>
-                 <p><span>Total Time :<?php echo($_SESSION[$sessionid]['displaytime']); ?></span></p>
+                 <p>Miles :<span><?php echo($_SESSION[$sessionid]['totaldistancecon']." Miles"); ?></span></p>
+                 <p>Time :<span><?php echo($_SESSION[$sessionid]['displaytime']); ?></span></p>
                 </div>
                 <div id="map"></div>
             </div>
@@ -181,4 +181,15 @@ include($apipath."get_session.php");
         })();
 
     </script>
+    <!-- Hotjar Tracking Code for https://gatwick-airporttaxis.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1879833,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
 </html>
