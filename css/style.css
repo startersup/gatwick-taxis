@@ -57,13 +57,11 @@ body{
     padding: 15px 15px 15px 0px !important;
     text-shadow: 0 0 4px #f4f4f4;
 }
-.navbar-collapse
+.navbar-brand .gth-logo
 {
-    background-color:#ffffff;
-}
-.navbar-brand span
-{
-    color:#000000;
+    max-width:180px;
+    width:100%;
+    margin-top:-20px;
 }
 .center-nav 
 {
