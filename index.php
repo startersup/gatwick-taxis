@@ -237,12 +237,10 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                                     <ul>
                                         <li>
                                             <p>Passengers</p>
-                                            <div class="num-block skin-2">
-                                                <div class="num-in">
-                                                    <span class="minus dis"></span>
-                                                    <input type="text" class="in-num" value="1" readonly="">
-                                                    <span class="plus"></span>
-                                                </div>
+                                            <div class="product-count">
+                                                <button class="button-count no-active" disabled>-</button>
+                                                <input type="text" readonly class="number-product" value="1">
+                                                <button class="button-count">+</button>
                                             </div>
                                         </li>
                                     </ul>

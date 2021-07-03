@@ -183,30 +183,32 @@ function clockUpdate() {
 
 
 
-$(document).ready(function() {
-    $('.num-in span').click(function () {
-        var $input = $(this).parents('.num-block').find('input.in-num');
-      if($(this).hasClass('minus')) {
-        var count = parseFloat($input.val()) - 1;
-        count = count < 1 ? 1 : count;
-        if (count < 2) {
-          $(this).addClass('dis');
-        }
-        else {
-          $(this).removeClass('dis');
-        }
-        $input.val(count);
-      }
-      else {
-        var count = parseFloat($input.val()) + 1
-        $input.val(count);
-        if (count > 1) {
-          $(this).parents('.num-block').find(('.minus')).removeClass('dis');
-        }
-      }
-      
-      $input.change();
-      return false;
-    });
-    
-  });
+var num;
+
+$('.button-count:first-child').click(function(){
+  num = parseInt($('input:text').val());
+  if (num > 1) {
+    $('input:text').val(num - 1);
+  }
+  if (num == 2) {
+    $('.button-count:first-child').prop('disabled', true);
+  }
+  if (num == 10) {
+    $('.button-count:last-child').prop('disabled', false);
+  }
+});
+
+$('.button-count:last-child').click(function(){
+  num = parseInt($('input:text').val());
+  if (num < 10) {
+    $('input:text').val(num + 1);
+  }
+  if (num > 0) {
+    $('.button-count:first-child').prop('disabled', false);
+  }
+  if (num == 9) {
+    $('.button-count:last-child').prop('disabled', true);
+  }
+});
+
+

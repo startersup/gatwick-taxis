@@ -107,52 +107,49 @@ body{
       cursor:pointer;
     letter-spacing:0.4px;
 }
-.num-block {
-	float: left;
-	width: 100%;
-  padding: 15px 30px;
-}
-/* skin 2 */
-.skin-2 .num-in {
-	background: #FFFFFF;
-	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
-	border-radius: 25px;
-	height: 40px;
-	width: 110px;
-  float: left;
-}
+.product-count {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    height: 30px;
+  }
+  
+  .product-count a {
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+  }
+  
+  .button-count {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #2196F3;
+    color: white;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    border: none;
+    outline: none;
+  }
+  .button-count:active {
+    background-color: #1565C0;
+  }
+  
+  .number-product {
+    display: inline-block;
+    width: 46px;
+    height: 28px;
+    font-size: 24px;
+    border: 1px solid silver;
+    text-align: center;
+  }
+  
+  :disabled {
+    background-color: silver;
+  }
+  
 
-.skin-2 .num-in	span {
-  width: 40%;
-  display: block;
-  height: 40px;
-  float: left;
-  position: relative;
-}
-
-.skin-2 .num-in span:before, .skin-2 .num-in span:after {
-  content: '';
-  position: absolute;
-  background-color: #667780;
-  height: 2px;
-  width: 10px;
-  top: 50%;
-  left: 50%;
-  margin-top: -1px;
-  margin-left: -5px;
-}
-
-.skin-2 .num-in span.plus:after {
-  transform: rotate(90deg);
-}
-
-.skin-2 .num-in input {
-		float: left;
-		width: 20%;
-		height: 40px;
-		border: none;
-		text-align: center;
-}
 .gt-modal-content
 {
     max-width:500px !important;
