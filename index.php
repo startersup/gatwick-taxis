@@ -74,7 +74,7 @@ include($spath);
 </div>
 
     <nav class="navbar navbar-fixed-top">
-        <div class="gt-container">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
@@ -131,9 +131,8 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
         <center><a href="javascript:void(Tawk_API.toggle())"><button class="xs-button"><i class="fa fa-comment-dots"></i> Chat with Us</button></a></center>
         <div class="gt-container">
             <div class="card book">
-                <div class="container1">
+                <div class="container-fluid">
 
-                   
                         <div class="row">
                             <form onsubmit=" DateSplitter();" action="/myapi/session_create.php" method="POST" id="info">
                                 <div class="col-md-1 nopadding">
