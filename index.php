@@ -201,8 +201,13 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                                  <center> <a class="gt-set-date" id="setDate">Set Date and Time</a></center>
                                 </div>
                             </div>
-                            <div class="col-md-1 nopadding">
-                                <select class="select gt-luggages" name="np" required>
+
+
+                            <div class="col-md-3 nopadding">
+                         
+                            <input type="text" class="gt-dp" tabindex="1" placeholder="Passengers & Luggages" autocomplete="off" id="pl-picker" name="tempDate" required>
+                            <div class="pl-popup" style="display:none">
+                            <select class="select gt-luggages" name="np" required>
                                     <option value="1"> 1 &#xf007;</option>
                                     <option value="2"> 2 &#xf007; </option>
                                     <option value="3"> 3 &#xf007;</option>
@@ -214,9 +219,6 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                                     <option value="9"> 9 &#xf007;</option>
                                     <option value="10"> 10 &#xf007;</option>
                                 </select>
-
-                            </div>
-                            <div class="col-md-1 nopadding">
                                 <select class="select" name="nl" data-toggle="tooltip" data-placement="auto" required>
                                     <option value="1" selected> 0 &#xf0f2;</option>
                                     <option value="1"> 1 &#xf0f2;</option>
@@ -230,7 +232,7 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                                     <option value="9"> 9 &#xf0f2;</option>
                                     <option value="10"> 10 &#xf0f2;</option>
                                 </select>
-
+                               </div>
                             </div>
                             <div class="col-md-2 nopadding">
                                <a> <button class="button">Get Quote Now</button></a>
@@ -755,6 +757,13 @@ $('#datetimepicker').val(tempDate);
   $('.datepicker-popup').hide();
     });
 	</script>
+
+<script>
+	 $("#pl-picker").focus(function(){
+        $('.pl-popup').toggle();
+     }
+        </script>
+
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
