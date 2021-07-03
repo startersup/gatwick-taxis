@@ -2,7 +2,6 @@
 
 
 session_start();
-unset($_SESSION);
 $spath = $_SERVER['DOCUMENT_ROOT']."/connection/connect.php";
 include($spath);
 $sessionid = $_REQUEST['q'];
@@ -58,7 +57,8 @@ $_SESSION[$sessionid]['totaldistancecon']=$output->{'totaldistancecon'};
 $_SESSION[$sessionid]['totaltimecon']= $output->{'totaltimecon'};
 $_SESSION[$sessionid]['displaytime']= $output->{'displaytime'};
 
-$_SESSION[$sessionparams]['bid']=$output->{'bid'};;
-$_SESSION[$sessionparams]['rid']=$output->{'rid'};;
+$_SESSION[$sessionid]['bid']=$output->{'bid'};
+$_SESSION[$sessionid]['rid']=$output->{'rid'};
 
+include('get_site_info.php');
 ?>

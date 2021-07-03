@@ -100,6 +100,7 @@ $field = explode(',', $temp);
 
 $arr = array('Saloon', 'Estate', 'MPV-4', 'MPV-6', '8-Seater', '9-Seater');
 $arr_fare = array(0, 20, 30, 30, -2, -2);
+$arr_size = array('4,2', '4,2', '6,4', '6,4', '7,6', '8,6');
 if ($_SESSION[$sessionparams]['fare_calc'] == 'y' || $_SESSION[$sessionparams]['fare_calc'] == 'Y') {
     for ($k = 0; $k < count($arr); $k++) {
         $cabtype = $arr[$k];
@@ -208,6 +209,8 @@ for ($k = 0; $k < count($arr); $k++) {
     $response[$mycab]["disfare"] = $myfare_discount[$mycab];
     $_SESSION[$sessionparams][$mycab] = $response[$mycab];
     $response[$mycab]["images"] = $images[$mycab];
+    $response[$mycab]["capacity"] = $arr_size[$k];
+    
 }
 
 $_SESSION[$sessionparams]["partner"] = $partnerlist;
