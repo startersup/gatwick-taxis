@@ -196,8 +196,8 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                                             <option value="50">50</option>
                                               <option value="55">55</option>  
                                 </select> 
-                                </div>
-                                  <a class="gt-set-date" id="setDate">Set Date and Time</a>
+                                </div><br>
+                                 <center> <a class="gt-set-date" id="setDate">Set Date and Time</a></center>
                                 </div>
                             </div>
                             <div class="col-md-1 nopadding">
@@ -604,9 +604,9 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
   "brand": "Gatwick TaxiHub",
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.4",
+    "ratingValue": "4.6",
     "bestRating": "5",
-    "ratingCount": "205"
+    "ratingCount": "67"
   }
 }
 </script>
