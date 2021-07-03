@@ -22,15 +22,15 @@ include($spath);
     <meta itemscope itemtype="https://schema.org/WebSite" itemref="sitename sitelink facebook twitter">
     <meta itemprop="name" content="Gatwick TaxiHub" id="sitename">
     <link href="https://gatwicktaxihub.com/" itemprop="url" id="sitelink">
-    <meta name="og:site_name" content="gatwick-airporttaxis.com">
+    <meta name="og:site_name" content="gatwicktaxihub.com">
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Gatwick TaxiHub | Book cheap Taxis to Gatwick Airport Online" />
     <meta property="og:description" content=" Compare and Book cheap Taxis and Minicabs online, gatwick chepeast taxis now with exciting discounts" />
     <meta property="og:image" content="https://gatwicktaxihub.com/assets/images/gatwick-taxis-home.png" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@MiniCabee" />
-    <meta name="twitter:title" content="Minicabee | Book Cheap Taxis & Minicabs Online" />
-    <meta name="twitter:description" content=" Compare and Book cheap Taxis and Minicabs online, gatwick chepeast taxis at minicabee" />
+    <meta name="twitter:site" content="@Gatwick Taxihub" />
+    <meta name="twitter:title" content="Gatwick Taxihub | Book Cheap Taxis & Minicabs Online" />
+    <meta name="twitter:description" content=" Compare and Book cheap Taxis and Minicabs online, gatwick chepeast taxis at Gatwick Taxihub" />
     <meta name="twitter:image" content="https://gatwicktaxihub.com/assets/images/logo.png" />
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -335,7 +335,7 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                     <img src="./images/partner.svg" style="max-width:280px;width:100%;">
                 </div>
                 <div class="col-md-8">
-                    <p class="para">Minicabee integrates with partners across the UK to serve local & long distance bookings from our Booking Engine. Attach your Taxis or entire fleet with us to become a partner and get regular jobs with good fares for sure, we charge very less for each booking as commision, why are you still waiting start attching your fleets with us now. No Registration Fee charges, no Pre payments required. Join our Partner Network now.
+                    <p class="para">Gatwick Taxihub integrates with partners across the UK to serve local & long distance bookings from our Booking Engine. Attach your Taxis or entire fleet with us to become a partner and get regular jobs with good fares for sure, we charge very less for each booking as commision, why are you still waiting start attching your fleets with us now. No Registration Fee charges, no Pre payments required. Join our Partner Network now.
                     </p>
                    <a href="../cab-partners"> <button class="small-button">Register Now</button></a>
                 </div>
@@ -543,9 +543,8 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                     <div class="col-md-3">
                         <h3>Reach us at</h3>
                         <ul class="footer-list">
-                            <li><a>Call us at : 01293344804</a></li>
-                            <li><a>Email: booking@gatwick-airporttaxis.com</a></li>
-                             <li><a>complaints: complaint@minicabee.co.uk</a></li>
+                            <li><a>Email: booking@gatwicktaxihub.com</a></li>
+                             <li><a>complaints: complaint@gatwicktaxihub.com</a></li>
                             <a href="#" class="social fa fa-facebook"></a>
                             <a href="#" class="social fa fa-twitter"></a>
                             <a href="#" class="social fa fa-google"></a>
@@ -559,7 +558,7 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p class="pull-left"> Copyright © Gatwick Airport Taxis 2020. Powered by <a href="https://minicabee.co.uk" style="color:#4dc199">Minicabee</a> </p>
+                <p class="pull-left"> Copyright © Gatwick Taxihub 2020. Powered by <a href="https://gatwicktaxihub.com" style="color:#4dc199">Gatwick Taxihub</a> </p>
                 <div class="pull-right">
                     <ul class="nav nav-pills payments">
                         <li><i class="fa fa-cc-visa"></i></li>
@@ -598,11 +597,11 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
 {
   "@context": "https://schema.org/", 
   "@type": "Product", 
-  "name": "Gatwick Airport Taxis",
-  "url": "https://gatwick-airporttaxis.com",
-  "image": "https://gatwick-airporttaxis.com/images/croydon-airport.svg",
+  "name": "Gatwick Taxihub",
+  "url": "https://gatwicktaxihub.com",
+  "image": "https://gatwicktaxihub.com/images/croydon-airport.svg",
   "description": "Gatwick Airport Cheap Taxis and Minicabs Online",
-  "brand": "Gatwick TaxiHub Booking",
+  "brand": "Gatwick TaxiHub",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.4",
@@ -778,40 +777,9 @@ s0.parentNode.insertBefore(s1,s0);
 <!--End of Tawk.to Script-->
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBauQAxB_oaAk4z-NQN2BkhmD4AxzA2l6M&libraries=places&callback=initAutocomplete" async="" defer=""></script>
-    <!-- Hotjar Tracking Code for https://gatwick-airporttaxis.com -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:1879833,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-<!-- Load Facebook SDK for JavaScript -->
-      <div id="fb-root"></div>
-      <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v8.0'
-          });
-        };
 
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
 
-      <!-- Your Chat Plugin code -->
-      <div class="fb-customerchat"
-        attribution=setup_tool
-        page_id="112290843970903">
-      </div>
+
 </body>
 
 </html>
