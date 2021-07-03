@@ -1,15 +1,46 @@
 
-@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai|ammersmith+One|Roboto|Rubik:400,500,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Hammersmith+One|Roboto&display=swap');
+@import'fonts.css';
 body{
     overflow-x:hidden;
 }
-
-
+.hellobar {
+    background-color: #06a55c;
+    box-shadow: 0 3px 0 #c13832;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+     text-shadow: 0 1px rgba(0,0,0, .3); 
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.hellobar-wrap {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+.hellobar-arrow {
+    position: absolute;
+    top: 7px;
+    right: 30px;
+    background-color: #00a069;
+}
+.hellobar-content {
+    overflow: hidden;
+    padding: 7px 0;
+    transition: 0.1s ease;
+}
 .navbar
 {
+    background-color: #ffffff;
+    position: sticky;
+    height: 65px;
+    z-index: 100;
+    font-weight: 600;
+    top: 0px;
     padding:5px 5px;
-    background-color:#ffffff;
         box-shadow: 0 2px 12px rgba(116,125,147,.2);
     -webkit-transition: top .5s ease-out;
     -o-transition: top .5s ease-out;
@@ -21,8 +52,14 @@ body{
     font-weight:800;
     letter-spacing:0.9px;
     color:#4dc199;
+    font-family: graphikweb-medium,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
+    padding: 15px 15px 15px 0!important;
     padding: 15px 15px 15px 0px !important;
     text-shadow: 0 0 4px #f4f4f4;
+}
+.navbar-collapse
+{
+    background-color:#ffffff;
 }
 .navbar-brand span
 {
@@ -33,12 +70,13 @@ body{
     padding-left:30px;
 }
 .navbar-nav>li>a{
-    font-size:14px;
-    color:rgba(44, 47, 66, 0.8);
-    font-weight:600;
-    letter-spacing:0.6px;
+    font-size:16px;
+  color:#1d2b36;
+    font-weight:400;
+    line-height:28px;
     cursor:pointer;
-    text-transform: uppercase;
+       font-family:'GraphikWeb-Medium','Segoe UI', sans-serif;
+
 }
 .navbar-right > li > a.login
 {
@@ -52,6 +90,12 @@ body{
       cursor:pointer;
     letter-spacing:0.4px;
 }
+   .quote-card label
+            {
+                font-size:15px !important;
+                  font-family:'GraphikWeb-Medium','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+                
+            }
 .navbar-right > li > a.signup
 {
     font-size:15px;
@@ -65,7 +109,57 @@ body{
       cursor:pointer;
     letter-spacing:0.4px;
 }
+.gt-modal-content
+{
+    max-width:500px !important;
+    width:100%;
+    margin:0 auto;
+}
+.gt-modal-header
+{
+  background: linear-gradient(158deg, #16A085 20%, #2ECC71 85%);
+    color:#ffffff;
+}
+.gt-modal-header h4
+{
+    text-align:center;
+       font-family:'GraphikWeb-Medium','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+.mc-places, .popular-fares
+{
+    padding:80px 0px;
+}
 
+.mc-places h3
+{
+  text-align: center;
+    font-size: 28px;
+    font-family: 'GraphikWeb-SemiBold', sans-serif;
+}
+.mc-places-table
+{
+    border:1px solid #cccccc;
+    padding:10px;
+}
+
+.mc-places-table td
+{
+    border:1px solid #cccccc;
+    padding: 13px 15px;
+  
+}
+.mc-places-table td a
+{
+      color:#000000;
+      font-family:'GraphikWeb-Regular','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size:13px;
+      text-decoration:none;
+}
+.mc-places-table td:hover
+{
+    background-color:#f4f4f4;
+    cursor:pointer;
+}
 .navbar-right > li > a.signup:hover, .navbar-right > li > a.login:hover
 {
     background-color:#cccccc;
@@ -73,12 +167,11 @@ body{
 .button {
   background: linear-gradient(158deg, #16A085 20%, #2ECC71 85%);
     border-color: #16A085;
-     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     font-family:'GraphikWeb-Medium','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border: none;
     width:100%;
     color:#ffffff;
     padding: 13px 30px;
-    font-weight:500;
     font-size:16px;
     text-align: center;
     text-decoration: none;
@@ -94,7 +187,7 @@ body{
 {
     background: linear-gradient(158deg, #16A085 44%, #2ECC71 85%);
     border-color: #16A085;
-      font-family: 'Rubik', sans-serif;
+   font-family:'GraphikWeb-Medium','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border: none;
     width:100%;
     max-width:200px;
@@ -112,7 +205,7 @@ body{
     background: #f4f4f4;
     border:1px solid #16A085;
     border-color: #16A085;
-      font-family: 'Rubik', sans-serif;
+    font-family:'GraphikWeb-Medium','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border: none;
     width:100%;
     font-weight:500 !important;
@@ -127,13 +220,41 @@ body{
     text-decoration: none;
     cursor: pointer;  
 }
-
+.textarea {
+    width: 100%;
+    padding: 12px 20px;
+    min-height: 45px;
+    min-height: 100px;
+    color: #000000;
+    box-sizing: border-box;
+    border: 1px solid #e5e5e5;
+    margin: 8px 0;
+    background-color: #ffffff;
+    border-radius: 0px;
+   font-family:'GraphikWeb-Regular','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.buttonexplore {
+background: linear-gradient(158deg, #16A085 44%, #2ECC71 85%);
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+     font-family:'GraphikWeb-Medium','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 .formed-group
 {
     display:flex;
 }
 .navbar-nav>li>a:hover{ 
-   color:rgba(44, 47, 66, 0.8);
+        color: #1d2b36;
    background-color:transparent;
 }
 .banner
@@ -144,10 +265,15 @@ body{
     min-height:500px; 
     background-color:#e2e3e9;
 }
+
+
+
+
 .cr-mask
 {
     opacity: 1;
      background-color:#c9e3e8cc;
+       margin-top:-30px;
 }
 .mc-features {
     padding: 10px 30px;
@@ -170,12 +296,73 @@ body{
     padding-left:60px;
         margin-top: 12px;
     text-align:left;
+    font-family:'GraphikWeb-Medium','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .mc-ft-icon {
     margin: 0px 0px 0px;
     width: 45px;
   position: absolute;
     height: 45px;
+}
+.mc-faq-bar {
+    max-width:700px;
+    width:100%;
+    margin: 10px auto;
+    padding: 10px 15px;
+    border: 1px solid #f4f4f4;
+    border-radius: 6px;
+    font-family:'GraphikWeb-Regular','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .06);
+}
+.mc-faq-bar h3
+{
+    text-align:center;
+      font-family:'GraphikWeb-SemiBold','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.mc-faq h4 {
+  text-align:left;
+     font-family:'GraphikWeb-SemiBold','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.mc-comp-table {
+    border: 1px solid #f4f4f4;
+     font-family:'GraphikWeb-Regular','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.mc-comp-table td {
+    padding: 10px;
+    border: 1px solid #f4f4f4;
+    color: #656565;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    font-weight: 400;
+    font-family: 'GraphikWeb-Regular', sans-serif;
+}
+
+.mc-comp-table .gt-head {
+    background-color: #CDDC39;
+    font-weight: 600;
+    color: #000000;
+}
+.ad-links
+{
+    list-style-type:none;
+    padding:0;
+    margin:0;
+}
+.ad-links a
+{
+    padding:0px 5px;
+    color:#000000;
+    text-decoration:none;
+}
+.mc-faq h3
+{
+    text-align:center;
+    font-family:'GraphikWeb-SemiBold','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    font-size:25px;
+}
+.mc-faq-bar b
+{
+     font-family:'GraphikWeb-Medium','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
 }
 .mc-br-rght p
 {
@@ -199,7 +386,7 @@ padding-top:130px;
 }
 .font
 {
-     font-family: 'Rubik', sans-serif;
+   font-family:'GraphikWeb-regular','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align:center;
     font-size:20px;
     font-weight:400;
@@ -210,7 +397,7 @@ padding-top:130px;
 }
 .text
 {
-       font-family: 'Rubik', sans-serif; 
+      font-family:'GraphikWeb-regular','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align:center;
     font-size:18px;
     font-weight:400;
@@ -252,7 +439,7 @@ box-shadow: 0 1px 1px 0 rgba(90,122,190,.1), 0 10px 20px 0 rgba(90,122,190,.2);
 
 .quote-card
 {
-      font-family: 'Rubik', sans-serif; 
+      font-family:'GraphikWeb-regular','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
      box-shadow: 0 1px 1px 0 rgba(90,122,190,.1), 0 10px 20px 0 rgba(90,122,190,.2);
     border: 1px solid rgba(90,122,190,.08);
     transition: 0.3s;
@@ -286,19 +473,72 @@ box-shadow: 0 1px 1px 0 rgba(90,122,190,.1), 0 10px 20px 0 rgba(90,122,190,.2);
             color: black;
             text-align: center;
 }
+.popover-wrapper {
+    max-width:120px;
+    width:100%;
+    position: relative;
+    display: inline-block;
+}
+.popover-wrapper:hover .popover-content {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, -20px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+.popover-content {
+    padding: 9px 14px;
+}
+.popover-content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 300px;
+    top: 50px;
+    left: 0px;
+    transform: translate(0, 10px);
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0 5px 30px 0 rgba(147,161,176,.25);
+}
+.popover-content:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    top: -10px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: black transparent #3a3a3a transparent;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+.popover-message {
+    text-align: left;
+    font-size: 12px !important;
+    font-family: 'GraphikWeb-Regular', sans-serif !important;
+    font-weight: 400 !important;
+}
+.popover-content h3
+{
+    font-size: 16px;
+    font-family: 'GraphikWeb-SemiBold', sans-serif;
+}
 
 .float-card
 {
   position: absolute;
     padding:5px 10px;
     font-size:10px;
-    color:#ffffff;
+    color:#000000;
+    cursor:pointer;
     border-radius:20px;
-    background-color: #ff0000;
+    background-color: #FFF5E5;
         font-family: 'Rubik', sans-serif; 
     font-weight:600;
+    border:1px solid #cccccc;
       box-shadow: 0 1px 1px 0 rgba(90,122,190,.1), 0 10px 20px 0 rgba(90,122,190,.2);
-    top:10px;
+    top:0px;
     left:10px;
     
 }
@@ -321,10 +561,14 @@ box-shadow: 0 1px 1px 0 rgba(90,122,190,.1), 0 10px 20px 0 rgba(90,122,190,.2);
 {
     font-size: 13px;
     line-height: 26px;
-    font-family: 'Rubik', sans-serif;
+       font-family:'GraphikWeb-Regular','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0px 20px;
     letter-spacing: 0.4px;
     
+}
+.dynamic b
+{
+     font-family:'GraphikWeb-Medium','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
 }
 .booknow
 {
@@ -380,6 +624,15 @@ box-shadow: 0 1px 1px 0 rgba(90,122,190,.1), 0 10px 20px 0 rgba(90,122,190,.2);
 {
     padding:10px;
 }
+.xd-dropdown-content ul li:hover
+{
+   background-color:#f4f4f4;
+}
+.xd-dropdown-content ul li:hover a
+{
+    color:#000000;
+    font-weight:700;
+}
 .xd-dropdown-content ul li a
 {
     font-size:15px;
@@ -391,7 +644,20 @@ box-shadow: 0 1px 1px 0 rgba(90,122,190,.1), 0 10px 20px 0 rgba(90,122,190,.2);
    font-family: 'Rubik', sans-serif;
 }
 
-
+a.promo-btn
+{
+    padding:15px 20px;
+    background-color:#000000;
+    margin-top:10px;
+    color:#ffffff !important;
+    cursor:pointer;
+    text-decoration:none;
+}
+a.small-button
+{
+    text-decoration:none;
+    color:#ffffff;
+}
 
 .checked {
     color: orange;
@@ -423,16 +689,16 @@ box-shadow: 0 1px 1px 0 rgba(90,122,190,.1), 0 10px 20px 0 rgba(90,122,190,.2);
 .map-overlay
 {
     background-color:#ffffff;
-    padding:20px;
+    padding:10px;
     z-index:10;
     position: absolute;
-    top:10px;
-    right:30px;
+    top:0;
+    right:10px;
 }
 .map-overlay span
 {
-    font-size:16px;
-    font-family: 'Rubik', sans-serif; 
+    font-size:14px;
+     font-family:'GraphikWeb-SemiBold','Segoe UI', 'Helvetica Neue', sans-serif;
     color:#000000;
 }
 #map {
@@ -451,33 +717,30 @@ box-shadow: 0 1px 1px 0 rgba(90,122,190,.1), 0 10px 20px 0 rgba(90,122,190,.2);
 }
     .fleet-name
     {
-        font-family: 'Hammersmith One', sans-serif;
+       font-family:'GraphikWeb-SemiBold','Segoe UI', 'Helvetica Neue', sans-serif;
         text-align:center;
         font-weight:700;
         font-size:20px;  
     }
 .header
 {
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-family:'GraphikWeb-SemiBold','Segoe UI', 'Helvetica Neue', sans-serif;
     font-size:38px;
     text-align: center;
     color:#ffffff;
     letter-spacing: 2px;
-    font-weight:800;
-    text-transform: uppercase;
     text-shadow: 0 0 5px rgba(0,0,0,1);
 }
 .about-croydon h3,.fleets-croydon h3
 {
     text-align:center;
     font-size:28px;
-    font-weight:800;
-    font-family: 'Hammersmith One', sans-serif;
+    font-family: 'GraphikWeb-SemiBold', sans-serif;
 }
 
 .about-croydon p
 {
-     font-family: 'Rubik', sans-serif; 
+    font-family: 'GraphikWeb-regular', sans-serif;
 color: rgba(44, 47, 66, 0.8);
     font-size: 15px;
     line-height: 28px;
@@ -485,6 +748,15 @@ color: rgba(44, 47, 66, 0.8);
     letter-spacing:0.4px;
 }
 
+.popular-fares p 
+{
+    font-family: 'GraphikWeb-regular', sans-serif;
+color: rgba(44, 47, 66, 0.8);
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 0;
+    letter-spacing:0.4px;
+}
 .green-background
 {
     margin-top:80px;
@@ -493,7 +765,7 @@ color: rgba(44, 47, 66, 0.8);
 }
 .fleet-desc
 {
-    font-family: 'Rubik', sans-serif; 
+     font-family: 'GraphikWeb-regular', sans-serif;
     color: #242438;
     text-align: center;
     font-size: 13px;
@@ -502,7 +774,10 @@ color: rgba(44, 47, 66, 0.8);
     margin-bottom: 0;
     letter-spacing: 0.2px;
 }
-
+._hj-f5b2a1eb-9b07_pull_left
+{
+    display:none !important;
+}
 .nopadding {
    padding:0px 2px;
     margin:0px;
@@ -520,12 +795,19 @@ input[type=text], .select {
     margin: 8px 2px !important;
     border:none;
     background-color:#ffffff;
-    font-size:16px;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:14px;
+    color:#000000;
+font-family:'GraphikWeb-regular','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border:1px solid #dcdcdc;
         -webkit-appearance: none;
     -webkit-border-radius: 0px;
     box-sizing: border-box;
+    outline:none;
+}
+.checkbox label, .radio label
+{
+    font-family:'GraphikWeb-regular','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 .track-search
 {
@@ -550,11 +832,10 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 .text-secondary
 {
     font-size:22px;
-    font-weight:600;
     color:#ffffff;
     text-align:center;
     letter-spacing:0.5px;
-    font-family: 'Hammersmith One', sans-serif;
+   font-family:'GraphikWeb-SemiBold','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .infotab
 {
@@ -627,12 +908,12 @@ width:100%;
 .about-croydon
 {
     padding:150px 0px;
-    font-family: 'Hammersmith One', sans-serif;
+ font-family: 'GraphikWeb-regular', sans-serif;
 }
 
 .aboutus
 {
-    font-family: 'Hammersmith One', sans-serif;
+    font-family: 'GraphikWeb-regular', sans-serif;
     line-height:28px;
 }
 
@@ -640,15 +921,19 @@ width:100%;
 {
     margin-top: 50px;
     padding:50px 0px;
-    font-family: 'Hammersmith One', sans-serif;
+   font-family: 'GraphikWeb-regular', sans-serif;
     background-color: #e4e4e4;
+}
+.primary-footer h3
+{
+   font-family: 'GraphikWeb-SemiBold', sans-serif;  
 }
 .footer-bottom
 {
     padding:20px;
     color:#ffffff;
     font-size:15px;
-    font-family: 'Hammersmith One', sans-serif;
+       font-family: 'GraphikWeb-Medium', sans-serif;
     background-color:#000000;
 }
 .footer-list
@@ -657,9 +942,17 @@ width:100%;
        margin: 0; /* To remove default bottom margin */ 
     padding: 0;
 }
+.gt-luggages
+{
+    
+}
+.gt-passengers
+{
+    
+}
 .center-txt
 {
-    color: rgba(255,255,255,.8);
+    color: #ffffff;
     font-size: 21px;
     text-align: center;
     line-height: 1.5;
@@ -667,14 +960,14 @@ width:100%;
     width:100%;
     margin:0 auto 30px;
     text-shadow: 0 0 2px rgb(168, 168, 168);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    font-family:'GraphikWeb-regular','Segoe UI', 'Helvetica Neue', sans-serif; 
     
 }
 
 .footer-list li
 {
    margin:0 !important;
-   font-family: 'Rubik', sans-serif; 
+    font-family:'GraphikWeb-regular', 'Segoe UI', sans-serif ;
     left:0;
     padding:3px 0px;
 }
@@ -693,7 +986,7 @@ width:100%;
    .para
     {
         padding:15px;
-        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+        font-family:'GraphikWeb-regular', 'Segoe UI', sans-serif ;
         font-size:16px !important;
     }
 
@@ -705,7 +998,7 @@ width:100%;
 
 .testimonials h3
 {
-    font-family: 'Hammersmith One', sans-serif;
+   font-family:'GraphikWeb-SemiBold', 'Segoe UI', sans-serif ;
     font-weight:800;
     font-size:35px;
     text-align: center;
@@ -776,7 +1069,7 @@ width:100%;
 .discount-panel
 {
   font-size:15px;
-  font-family: 'Hammersmith One', sans-serif;
+  font-family:'GraphikWeb-regular', 'Segoe UI', sans-serif ;
         text-align:center;
         font-weight:400;  
     color:#777777;   
@@ -784,7 +1077,7 @@ width:100%;
 .passenger-capacity
 {
   font-size:15px;
-  font-family: 'Hammersmith One', sans-serif;
+    font-family:'GraphikWeb-regular', 'Segoe UI', sans-serif ;
         text-align:center;
         font-weight:400;  
     color:#777777;
@@ -792,7 +1085,7 @@ width:100%;
 .fare
 {
     font-size:20px;
-    font-family: 'Hammersmith One', sans-serif;
+   font-family:'GraphikWeb-SemiBold', 'Segoe UI', sans-serif ;
         text-align:center;
         font-weight:800;
 }
@@ -815,7 +1108,7 @@ width:100%;
       font-weight:600;
       position: relative;
       text-align: center;
-      font-family: 'Hammersmith One', sans-serif;
+  font-family:'GraphikWeb-Medium', 'Segoe UI', sans-serif ;
       text-transform: uppercase;
       color: #7d7d7d;
   }
@@ -828,7 +1121,7 @@ width:100%;
       background-color: #7d7d7d;
       display: block;
       font-weight:600;
-      font-family: 'Hammersmith One', sans-serif;
+    font-family:'GraphikWeb-Medium', 'Segoe UI', sans-serif ;
       text-align: center;
       margin: 0 auto 10px auto;
       border-radius: 50%;
@@ -841,7 +1134,7 @@ width:100%;
       position: absolute;
       background-color: #7d7d7d;
       top: 7px;
-      font-family: 'Hammersmith One', sans-serif;
+ font-family:'GraphikWeb-regular', 'Segoe UI', sans-serif ;
       left: -50%;
       z-index: -1;
       transition: all .8s;
@@ -865,18 +1158,16 @@ width:100%;
 .fixed-fares h3
 {
     text-align: center;
-    font-weight:700;
     padding:20px 0px;
-    font-family: 'Hammersmith One', sans-serif;
+   font-family:'GraphikWeb-SemiBold', 'Segoe UI', sans-serif ;
     color:#000000;
     font-size:25px;
     
 }
 .fixed-fares table thead
 {
-    font-family: 'Hammersmith One', sans-serif; 
+   font-family:'GraphikWeb-Medium', 'Segoe UI', sans-serif ;
     font-size:16px;
-    font-weight:500px;
     letter-spacing: 0.3px;
     background-color:#58c59e;
     color:#ffffff;
@@ -891,7 +1182,7 @@ width:100%;
     }
     .header
     {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:'GraphikWeb-SemiBold','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     font-weight: 800;
     font-size: 24px;
@@ -925,6 +1216,7 @@ width:100%;
     {
         box-shadow:none;
         border: none;
+      
     }
 
     .about-croydon
@@ -939,10 +1231,7 @@ width:100%;
     {
         font-size:22px;
     }
-    label
-            {
-                font-size:15px;
-            }
+
     .margintop
 {
 padding-top:80px;
@@ -958,7 +1247,7 @@ padding-top:80px;
     padding:6px;
     font-size:12px;
     letter-spacing:0.5px;
-    font-family: 'Hammersmith One', sans-serif;
+  font-family:'GraphikWeb-Regular','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
 
@@ -975,7 +1264,7 @@ padding-top:80px;
     font-size:13px;
     text-align:center;
     letter-spacing:0.5px;
-    font-family: 'Hammersmith One', sans-serif; 
+    font-family:'GraphikWeb-Regular','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
 .rigid
@@ -986,25 +1275,243 @@ font-size:10px;
 .dynamic
 {
     font-size:13px;
-    font-family: 'Hammersmith One', sans-serif;
+     font-family:'GraphikWeb-Regular','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding:10px 20px;
     letter-spacing:0.4px;
     
 }
 .font
 {
-    font-family: 'Rubik', sans-serif; 
+   font-family:'GraphikWeb-Bold','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align:center;
     font-size:13px;
-    font-weight:bold;
     padding:10px;
     letter-spacing:0.6px;
     color:#000;
     text-shadow: 3px 3px 3px #000000;   
 }
+
     .testimonials h3 {
     font-size: 30px;
     line-height: 38px;
 }
      select { font-family: 'FontAwesome', sans-serif  !important}
+     
+     .about-croydon h3, .fleets-croydon h3, .mc-places h3, .page-faq h3 {
+    text-align: center;
+    font-size: 20px !important;
+    line-height: 30px !important;
+     }
+     .page-faq h4 {
+    font-size: 14px !important;
+    line-height: 20px !important;
+     }
+     .page-faq p {
+    font-size: 12px !important;
+    line-height: 18px !important;
+     }
+     .testimonials h3 {
+    font-size: 25px !important;
+    line-height: 38px !important;
+}
+.navbar-nav>li>a {
+    font-size: 14px !important;
+}
+.nav>li>a
+{
+    padding:10px !important;
+}
+.center-nav
+{
+    padding-left:0px;
+}
+.navbar-right
+{
+  display:none !important;  
+}
+.navbar-collapse
+{
+    display:none !important;
+}
+}
+
+.datepicker-popup
+{
+    display:none;
+    background-color:#ffffff;
+    padding:15px;
+    z-index:100;
+    position:absolute;
+    top:55px;
+    border:1px solid #cccccc;
+    box-shadow: 0 3px 5px -4px rgba(0,0,0,0.17);
+}
+.gt-dp:focus .datepicker-popup
+{
+ display:block;
+}
+.ui-widget.ui-widget-content
+{
+    border:none !important;
+}
+.ui-widget-header
+{
+    box-shadow: 0 0px 20px rgba(116, 113, 113, 0.1);
+    border:none;
+    background-color:#ffffff !important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active
+{
+    border: 1px solid #e2e2e2 !important;
+}
+.datepicker-popup p
+{ font-family:'GraphikWeb-SemiBold','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:700;
+    margin-top:10px;
+    margin-bottom:0px;
+}
+.d-flex
+{
+    display:flex;
+}
+.d-flex select
+{
+    height: 30px;
+    padding: 5px 20px;   
+    background-color: #f4f4f4;
+}
+.ui-datepicker .ui-datepicker-header
+{
+    padding:0 !important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active
+{
+    text-align:center;
+}
+.gt-set-date
+{
+      font-family:'GraphikWeb-SemiBold','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top:10px;
+    padding:5px 20px;
+    border:none;
+    font-weight:600;
+    text-align:center;
+    color:#ffffff;
+     text-decoration:none;
+    cursor:pointer;
+    background: linear-gradient(158deg, #16A085 20%, #2ECC71 85%);
+}
+.gt-set-date:hover
+{
+    color:#ffffff;
+    text-decoration:none;
+}
+/*.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next*/
+/*{*/
+/*    border:none;*/
+/*    top:0px;*/
+/*    left:0px;*/
+/*}*/
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus {
+    border:none !important;
+    background-color:none !important;
+	font-weight: normal;
+	color: #2b2b2b;
+}
+
+#offermodal .modal-content
+{
+    text-align:center;
+  margin-top: 200px;
+    height: 400px;
+    color: #ffffff;
+    background-image: url(https://gatwick-airporttaxis.com/images/bgoffer.png),radial-gradient(43.87% 50% at 50% 50%,#69a97d 0,#149e51 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#offermodal .modal-content h3
+{
+    margin-top: 120px;
+    Font-size:45px;
+    font-weight:800;
+    color:#ffffff;
+       font-family:'GraphikWeb-SemiBold','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#offermodal .modal-content p
+{
+    font-size:28px;
+    font-weight:600;
+    color:#ffffff;
+ font-family:'GraphikWeb-Regular','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#offermodal .modal-content small 
+{
+    font-soze:16px;
+    font-weight:600;
+     font-family:'GraphikWeb-Regular','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#offermodal .modal-content .close
+{
+    color:#ffffff !important;
+    opacity:1 !important;
+    font-size:28px;
+}
+
+#offermodal .model-content 
+{
+ box-shadow: 0 5px 15px rgb(154 154 154 / 50%) !important;
+    border: none !important;
+}
+
+.page-faq
+{
+    padding:40px 0px;
+}
+.page-faq table 
+{
+    padding:10px;
+    border:1px solid #cccccc;
+}
+.page-faq tr 
+{
+    background-color:#f4f6f7;
+    border-bottom:1px solid #cccccc;
+}
+.page-faq td
+{
+    padding:10px 20px;
+}
+
+.page-faq h3 
+{
+    text-align:center;
+    font-weight:700;
+    font-size:38px;
+        font-family:'GraphikWeb-SemiBold','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.page-faq h4 
+{
+    font-size:20px;
+    font-weight:600;
+    margin-top:20px;
+        line-height:35px;
+        font-family:'GraphikWeb-SemiBold','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.page-faq p
+{
+    font-size:16px;
+    font-weight:500;
+    margin-top:5px;
+    line-height:26px;
+        font-family:'GraphikWeb-Regular','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
