@@ -120,8 +120,7 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                 <li><a><div style="font-size:13px;color:#ffffff;display:flex;border:1px solid #cccccc;background-color:#03b128;padding:0 0 0 10px;">Current Time: &nbsp;<div class="digital-clock"> 00:00:00</div></div></a></li>
-                    <!--<li><a class="login" data-toggle="modal" data-target="#login-modal">Login</a></li>-->
-                    <!--<li><a class="signup" data-toggle="modal" data-target="#signin-modal">Signup</a></li>-->
+              
                 </ul>
             </div>
         </div>
@@ -129,7 +128,7 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
     <section class="banner cr-mask">
         <h1 class="header margintop">Cheap Gatwick TaxiHub & Minicab Quote </h1>
        <p class="center-txt hidden-xs">Compare 100's of Cheap Taxi Provider Quotes and Book the cheapest of all with additional 10% discount on airport Trips</p>
-        <center><a href="tel:+441293344804"><button class="xs-button"><i class="fa fa-phone"></i> Call us : 01293344804</button></a></center>
+        <center><a href="javascript:void(Tawk_API.toggle())"><button class="xs-button"><i class="fa fa-comment-dots"></i> Chat with Us</button></a></center>
         <div class="gt-container">
             <div class="card book">
                 <div class="container1">
@@ -137,16 +136,15 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                    
                         <div class="row">
                             <form onsubmit=" DateSplitter();" action="/myapi/session_create.php" method="POST" id="info">
-                            <div class="col-md-2 nopadding">
+                            <div class="col-md-3 nopadding">
                                 <input type="text" name="pick" id="autocomplete" placeholder="Pickup Postcode" autocomplete="off" required>
-                                
                                  <input type="hidden" name="pick_pc" id="autocomplete_pc" >
                                  
                             </div>
-                            <div class="col-md-2 nopadding">
+                            <!-- <div class="col-md-2 nopadding">
                                 <input type="text" name="via" id="autocomplete3" autocomplete="off" placeholder="Via + (Optional)">
-                            </div>
-                            <div class="col-md-2 nopadding">
+                            </div> -->
+                            <div class="col-md-3 nopadding">
                                 <input type="text" name="drop" id="autocomplete2" autocomplete="off" placeholder="Dropoff Postcode" required>
                                    <input type="hidden" name="drop_pc" id="autocomplete2_pc" >
                             </div>
