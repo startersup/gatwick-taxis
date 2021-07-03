@@ -177,9 +177,22 @@ body{
     margin: 8px 2px;
     cursor: pointer;
 }
+
 .button:hover
 {
  background: linear-gradient(158deg, #16A085 55%, #2ECC71 95%);   
+}
+.gth-via 
+{
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    background-color: #05a74e;
+    font-family: 'GraphikWeb-Medium','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    padding: 13px 20px;
+    margin: 8px 2px;
+    color: #ffffff;
 }
 .small-button
 {

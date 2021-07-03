@@ -131,7 +131,7 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
         <center><a href="javascript:void(Tawk_API.toggle())"><button class="xs-button"><i class="fa fa-comment-dots"></i> Chat with Us</button></a></center>
         <div class="gt-container">
             <div class="card book">
-            <div class="gt-container">
+            <div class="container-fluid">
                         <div class="row">
                             <form onsubmit=" DateSplitter();" action="/myapi/session_create.php" method="POST" id="info">
                                 <div class="col-md-1 nopadding">
@@ -146,7 +146,7 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                             </div>
                         
                             <div class="col-md-1 nopadding">
-                                <button class="btn btn-success">Via +</button>
+                                <button class="gth-via">Via +</button>
                             </div>
                             <div class="col-md-2 nopadding">
                                 <input type="text" name="drop" id="autocomplete2" autocomplete="off" placeholder="Dropoff Postcode" required>
@@ -242,7 +242,7 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
 
                             </div>
                         </form>
-                      ß</div>
+                      </div>
                         </div>
             </div>
             <div class="mc-features hidden-xs" id="mc-border">
