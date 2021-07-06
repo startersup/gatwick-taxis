@@ -10,7 +10,7 @@ include($spath);
 <html lang="en">
 
 <title>Gatwick TaxiHub | Book Cheap and Comfortable Taxis & Cabs</title>
-<link rel="icon" href="../images/favicon.png" type="image/gif" sizes="16x16">
+<link rel="icon" href="./images/favicon.png" type="image/gif" sizes="16x16">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description"
@@ -133,7 +133,7 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                 <ul class="nav navbar-nav navbar-right">
                     <li><a>
                             <div
-                                style="font-size:13px;color:#ffffff;display:flex;border:1px solid #cccccc;background-color:#03b128;padding:0 0 0 10px;">
+                                style="font-size:13px;color:#ffffff;display:flex;border:1px solid #cccccc;background-color:#5c33f6;padding:0 0 0 10px;">
                                 Current Time: &nbsp;<div class="digital-clock"> 00:00:00</div>
                             </div>
                         </a></li>
