@@ -131,6 +131,9 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
         </div>
     </nav>
     <section class="banner cr-mask">
+    <video autoplay="" muted="" loop="" poster="./images/gatwick-home.jpg">
+<source src="./videos/intro-video.mp4" type="video/mp4">
+</video>
         <h1 class="header margintop">Cheap Gatwick TaxiHub & Minicab Quote </h1>
         <p class="center-txt hidden-xs">Compare 100's of Cheap Taxi Provider Quotes and Book the cheapest of all with
             additional 10% discount on airport Trips</p>

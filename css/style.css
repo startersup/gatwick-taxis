@@ -338,13 +338,19 @@ background: linear-gradient(158deg, #16A085 44%, #2ECC71 85%);
 }
 .banner
 {
-    background-image: url(../videos/intro-video.mp4);
     background-repeat: no-repeat;
     background-size:cover;
     min-height:700px; 
     background-color:#e2e3e9;
 }
-
+.banner video {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
 
 
 
