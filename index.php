@@ -10,7 +10,7 @@ include($spath);
 <html lang="en">
 
 <title>Gatwick TaxiHub | Book Cheap and Comfortable Taxis & Cabs</title>
-<link rel="icon" href="./images/favicon.png" type="image/gif" sizes="16x16">
+<link rel="icon" href="https://gatwicktaxihub.com/images/favicon.svg" type="image/gif" sizes="16x16">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description"
@@ -140,12 +140,14 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                     <li><a href="../cab-partners">Cab Partners</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a>
+                <li><a href="javascript:void(Tawk_API.toggle())"><button class="small-button"><i
+                        class="fa fa-comment-dots"></i> Chat with Us</button></a></li>
+                    <!-- <li><a>
                             <div
                                 style="font-size:13px;color:#ffffff;display:flex;border:1px solid #cccccc;background-color:#5c33f6;padding:0 0 0 10px;">
                                 Current Time: &nbsp;<div class="digital-clock"> 00:00:00</div>
                             </div>
-                        </a></li>
+                        </a></li> -->
 
                 </ul>
             </div>
@@ -155,8 +157,7 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
         <h1 class="header margintop">Cheap Gatwick TaxiHub & Minicab Quote </h1>
         <p class="center-txt hidden-xs">Compare 100's of Cheap Taxi Provider Quotes and Book the cheapest of all with
             additional 10% discount on airport Trips</p>
-        <center><a href="javascript:void(Tawk_API.toggle())"><button class="xs-button"><i
-                        class="fa fa-comment-dots"></i> Chat with Us</button></a></center>
+ 
         <div class="gt-container">
             <div class="card book">
                 <div class="container-fluid">
