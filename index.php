@@ -96,7 +96,16 @@ include($spath);
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav center-nav">
                     <li><a href="../about/">About</a></li>
-                    <li><a href="#our_fleets">Our Fleets</a></li>
+                     <li class="dropdown"><a class="dropdown-toggle custom-arrow">Services</a>
+                        <div class="xd-dropdown-content">
+                            <ul>
+                             <li>Taxi Booking</li>
+                             <li>Wheelchair Taxi Booking</li>
+                             <li>Minibus Booking</li>
+                             <li>Corporate Bookings</li>
+                            </ul>
+                            </div>
+                                <li>
                     <li class="dropdown"><a class="dropdown-toggle custom-arrow">Areas we Cover</a>
                         <div class="xd-dropdown-content">
                             <ul>

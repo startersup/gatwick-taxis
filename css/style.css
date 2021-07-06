@@ -206,8 +206,10 @@ body{
     background-color:#cccccc;
 }
 .button {
-  background: linear-gradient(158deg, #16A085 20%, #2ECC71 85%);
-    border-color: #16A085;
+    background: linear-gradient(
+        158deg
+        , #6c4aee 20%, #5c33f5 85%);
+            border-color: #5c33f5;
      font-family:'GraphikWeb-Medium','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border: none;
     width:100%;
