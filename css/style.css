@@ -346,12 +346,26 @@ background: linear-gradient(158deg, #16A085 44%, #2ECC71 85%);
 .banner video {
     position: absolute;
     left: 0px;
-    top: 0;
+    z-index:0;
+    top: 99px;
     width: 100%;
     height: 700px;
     object-fit: cover;
 }
-
+.overlay {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 100%;
+    height: 700px;
+    z-index: 1;
+    background: rgba(3, 3, 3, 0.493);
+    opacity: 0.5;
+}
+.banner-ct
+{
+    z-index:10;
+}
 
 
 .cr-mask
