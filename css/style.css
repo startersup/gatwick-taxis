@@ -3,6 +3,10 @@
 body{
     overflow-x:hidden;
 }
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse
+{
+    margin: -2px !important;
+}
 .hellobar {
     background-color: #5c33f6;
     box-shadow: 0 3px 0 #c13832;
@@ -334,10 +338,10 @@ background: linear-gradient(158deg, #16A085 44%, #2ECC71 85%);
 }
 .banner
 {
-    background-image: url(../images/gatwick-home-banner.jpg);
+    background-image: url(../videos/intro-video.mp4);
     background-repeat: no-repeat;
     background-size:cover;
-    min-height:500px; 
+    min-height:700px; 
     background-color:#e2e3e9;
 }
 
@@ -347,7 +351,7 @@ background: linear-gradient(158deg, #16A085 44%, #2ECC71 85%);
 .cr-mask
 {
     opacity: 1;
-     background-color:#c9e3e8cc;
+     background-color:#5c33f6;
        margin-top:-30px;
 }
 .mc-features {

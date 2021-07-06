@@ -153,7 +153,7 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                             </div>
 
                             <div class="col-md-1 nopadding">
-                                <button class="gth-via" data-toggle="modal" data-target="#viapopup">Via +</button>
+                                <a class="gth-via" data-toggle="modal" data-target="#viapopup">Via +</a>
                             </div>
                             <div class="col-md-2 nopadding">
                                 <input type="text" name="drop" id="autocomplete2" autocomplete="off"
