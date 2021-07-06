@@ -76,6 +76,7 @@ body{
        font-family:'GraphikWeb-Medium','Segoe UI', sans-serif;
 
 }
+
 .navbar-right > li > a.login
 {
   font-size:15px;
@@ -106,6 +107,10 @@ body{
     margin:5px 2px;
       cursor:pointer;
     letter-spacing:0.4px;
+}
+.txh-dropdown ul li
+{
+    font-family:'GraphikWeb-Medium','Segoe UI', sans-serif;
 }
 .product-count {
     position: absolute;
@@ -226,6 +231,21 @@ body{
 .button:hover
 {
  background: linear-gradient(158deg, #16A085 55%, #2ECC71 95%);   
+}
+.nv-btn
+{
+    padding: 5px 20px;
+    margin-top: -10px;
+    color: #ffffff;
+    background-color: #5c33f5;
+    border: 2px solid #5c33f5;
+    border-radius: 3px;
+}
+.nv-btn img 
+{
+max-width:20px;
+width:100%;
+margin-right:5px;
 }
 .gth-via 
 {

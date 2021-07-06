@@ -38,35 +38,13 @@ include($spath);
 <meta name="twitter:image" content="https://gatwicktaxihub.com/assets/images/logo.png" />
 <link rel="stylesheet" href="./css/bootstrap.min.css">
 <link rel="stylesheet" href="./css/style.css">
-<!-- <script src="./js/jquery.min.js"></script> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/indexjs.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-
-
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158960428-2"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-158960428-2');
-</script>
-
-
-
-
-
 </head>
 
 <body>
@@ -140,8 +118,7 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                     <li><a href="../cab-partners">Cab Partners</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                <li><a href="javascript:void(Tawk_API.toggle())"><button class="small-button"><i
-                        class="fa fa-comment-dots"></i> Chat with Us</button></a></li>
+                <li><a href="javascript:void(Tawk_API.toggle())"><button class="nv-btn"><img src="./images/chat.png"> Chat with Us</button></a></li>
                     <!-- <li><a>
                             <div
                                 style="font-size:13px;color:#ffffff;display:flex;border:1px solid #cccccc;background-color:#5c33f6;padding:0 0 0 10px;">
