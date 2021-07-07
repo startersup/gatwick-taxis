@@ -230,8 +230,36 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
 
                             <div class="col-md-2 nopadding">
 
+                            <div id="input_container_1">
                                 <input type="text" class="gth-pl" tabindex="1" placeholder="Passengers & Luggages"
                                     autocomplete="off" id="plpicker" name="" required>
+                                    <img src="https://cdn4.iconfinder.com/data/icons/36-slim-icons/87/calender.png" id="input_img">
+
+                                    </div>
+<style>
+#input_container {
+    position:relative;
+    padding:0 0 0 20px;
+    margin:0 20px;
+    background:#ddd;
+    direction: rtl;
+    width: 200px;
+}
+#plpicker {
+    height:20px;
+    margin:0;
+    padding-right: 30px;
+    width: 100%;
+}
+#input_img {
+    position:absolute;
+    bottom:2px;
+    right:5px;
+    width:24px;
+    height:24px;
+}
+</style>
+
                                 <div class="pl-popup" style="display:none">
                                 <ul>
                                         <li>
@@ -285,6 +313,8 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                                         </select>
                                         </li>
                                     </ul>
+                                    <br>
+                                    <center> <a class="gt-set-date" id="setPass">Set Passenger</a></center>
                                 </div>
                             </div>
                             <div class="col-md-2 nopadding">
@@ -808,6 +838,11 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
             $('#datetimepicker').val(tempDate);
             $('.datepicker-popup').hide();
         });
+        $('#setPass').click(function () {
+
+        });
+        
+
     </script>
 
     <script>
