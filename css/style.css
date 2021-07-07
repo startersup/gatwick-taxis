@@ -338,6 +338,7 @@ background: linear-gradient(158deg, #16A085 44%, #2ECC71 85%);
 }
 .banner
 {
+    background-image: url(../images/gatwick-home-banner.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     min-height:700px; 
