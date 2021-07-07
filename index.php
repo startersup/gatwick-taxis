@@ -296,7 +296,6 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                 </div>
             </div>
     </section>
-    <section>
     <div class="mc-features hidden-xs" id="mc-border">
                 <div class="row">
                     <div class="col-md-4 mc-br-rght mc-flex-row">
@@ -320,7 +319,6 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                 </div>
             </div>
         </div>
-    </section>
     <section class="about-croydon">
         <div class="container">
             <h3>Get a Quote & Book Taxis / Minicabs - Gatwick TaxiHub
