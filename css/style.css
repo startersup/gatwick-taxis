@@ -1446,7 +1446,7 @@ font-size:10px;
 }
 }
 
-.datepicker-popup, .pl-popup
+.datepicker-popup, .pl-popup, .via-popup
 {
     display:none;
     background-color:#ffffff;

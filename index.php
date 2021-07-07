@@ -158,7 +158,15 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                             </div>
 
                             <div class="col-md-1 nopadding">
-                                <a class="gth-via" data-toggle="modal" data-target="#viapopup">Via +</a>
+                                <div class="via-wrapper">
+                                <button class="gth-via">Via +</button>
+                                <div class="via-popup" style="display:none">
+                                <input type="text" name="via"  placeholder="Enter Via Point 1"
+                                    autocomplete="off" ><br>
+                                    <input type="text" name="via2"  placeholder="Enter Via Point 2"
+                                    autocomplete="off" >
+                                </div>
+                                </div>
                             </div>
                             <div class="col-md-2 nopadding">
                                 <input type="text" name="drop" id="autocomplete2" autocomplete="off"
@@ -642,24 +650,7 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
 
     </footer>
 
-    <!-- Modal -->
-    <div class="modal fade" id="viapopup" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Add Via Points</h4>
-                </div>
-                <div class="modal-body">
-                    <input type="text" name="via" id="autocomplete3" autocomplete="off" placeholder="Dropoff Postcode">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-dismiss="modal">Proceed</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal -->
+
 
     <script type="application/ld+json">
         {
@@ -680,22 +671,6 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
     </script>
 
     <?php include 'login.php';?>
-
-    <script>
-        $(document).ready(function () {
-            setTimeout(function () {
-                $("#offermodal").css({
-                    'display': 'block',
-                    "opacity": "1",
-                    'background-color': 'rgb(0 0 0 / 26%)'
-                });
-            }, 5000);
-
-            $(".close").on("click", function () {
-                $(".modal").hide();
-            });
-        });
-    </script>
 
 
     <script>
@@ -835,11 +810,11 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
         });
     </script>
 
-    <!-- <script>
-	 $("#plpicker").focus(function(){
-        $('.pl-popup').show();
+    <script>
+	 $(".gth-via").click(function(){
+        $('.via-popup').toggle();
      }
-        </script> -->
+        </script>
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
