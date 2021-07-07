@@ -237,7 +237,7 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
 
                                     </div>
 <style>
-#input_container {
+#input_container_1 {
     position:relative;
     padding:0 0 0 20px;
     margin:0 20px;
