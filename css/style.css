@@ -392,6 +392,11 @@ background: linear-gradient(158deg, #16A085 44%, #2ECC71 85%);
 }
 
 /*google autocomplete css*/
+.pac-container 
+{
+    min-width:280px;
+    width:100%;
+}
 .pac-item
 {
     padding:5px 10px !important;
