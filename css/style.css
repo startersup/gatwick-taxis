@@ -390,6 +390,14 @@ background: linear-gradient(158deg, #16A085 44%, #2ECC71 85%);
 {
         border-right: 1px solid #eee;
 }
+
+/*google autocomplete css*/
+.pac-item
+{
+    padding:5px 10px !important;
+    font-family:'GraphikWeb-Medium','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .mc-ft-pad h3
 {
     font-size:20px;
