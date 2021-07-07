@@ -295,7 +295,9 @@ while($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
                     </div>
                 </div>
             </div>
-            <div class="mc-features hidden-xs" id="mc-border">
+    </section>
+    <section>
+    <div class="mc-features hidden-xs" id="mc-border">
                 <div class="row">
                     <div class="col-md-4 mc-br-rght mc-flex-row">
                         <img class="mc-ft-icon" src="./images/star.svg">
