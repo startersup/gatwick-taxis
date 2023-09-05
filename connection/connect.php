@@ -6,6 +6,8 @@ if(!$conn)
 {
     echo("Conn Failed");
 
+}else{
+     echo("Conn Success");
 }
 $conn_seo=mysqli_connect('sql131.main-hosting.eu','u591648374_seo','myproject','u591648374_seo');
 
