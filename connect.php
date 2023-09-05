@@ -1,5 +1,5 @@
 <?php
 
-$conn=mysqli_connect('77.104.134.224','britann8_brit','myproject','britann8_brit');
+$conn=mysqli_connect('srv671.hstgr.io','u678426119_mini','Minicabee@123','u678426119_mini');
 
 ?>
