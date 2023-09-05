@@ -2,7 +2,11 @@
 
 $conn=mysqli_connect('srv671.hstgr.io','u678426119_mini','Minicabee@123','u678426119_mini');
 
+if(!$conn)
+{
+    echo("Conn Failed");
 
+}
 $conn_seo=mysqli_connect('sql131.main-hosting.eu','u591648374_seo','myproject','u591648374_seo');
 
 
